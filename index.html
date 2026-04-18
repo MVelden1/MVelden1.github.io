@@ -1,269 +1,438 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mick van der Velden – Software Developer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mick van der Velden — Software Developer</title>
+<meta name="description" content="Interactief CV van Mick van der Velden — Software Developer, Java & Frontend, API-integraties." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <span class="nav-logo">MV<span class="logo-dot">.</span></span>
-      <ul>
-        <li><a href="#profiel">Profiel</a></li>
-        <li><a href="#werkervaring">Ervaring</a></li>
-        <li><a href="#opleiding">Opleiding</a></li>
-        <li><a href="#vaardigheden">Skills</a></li>
-        <li><a href="#buiten">Persoonlijk</a></li>
-      </ul>
-<a href="mailto:mvelden6@gmail.com" class="nav-cta">Contact</a>
+<!-- ==========================================================
+     Top bar
+     ========================================================== -->
+<header class="topbar">
+  <div class="inner">
+    <a href="#top" class="brand">
+      <span>MV</span>
+      <span class="dot"></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#profiel" data-i18n="nav.profile">Profiel</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#ervaring" data-i18n="nav.experience">Ervaring</a>
+      <a href="#playground" data-i18n="nav.playground">Playground</a>
+      <a href="#opleiding" data-i18n="nav.education">Opleiding</a>
+      <a href="#buiten" data-i18n="nav.beyond">Buiten</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="top-actions">
+      <button id="langBtn" class="btn btn-ghost" style="padding: 8px 12px; font-size: 12px;" title="Taal / Language" aria-label="Switch language">
+        <span id="langLabel">EN</span>
+      </button>
+      <button id="downloadBtn" class="btn btn-ghost" style="padding: 8px 14px; font-size: 12px;" title="Download PDF">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        PDF
+      </button>
+      <button id="themeBtn" class="icon-btn" title="Thema wisselen" aria-label="Thema wisselen">
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
     </div>
-  </nav>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <header id="hero">
-    <canvas id="hero-canvas"></canvas>
-    <div class="hero-content">
-      <div class="hero-text">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Beschikbaar voor nieuwe kansen
-        </div>
-        <h1>
-          <span class="h1-top">Mick van der</span>
-          <span class="h1-bottom">Velden<span class="cursor">_</span></span>
-        </h1>
-        <p class="hero-sub">Software Developer &nbsp;·&nbsp; Java &amp; Frontend &nbsp;·&nbsp; API-integraties</p>
-        <div class="hero-links">
-          <a href="mailto:mvelden6@gmail.com" class="btn-primary"><i class="fa-solid fa-envelope"></i> Mail mij</a>
-          <a href="https://linkedin.com/in/mick-van-der-velden" target="_blank" class="btn-ghost"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-          <a href="https://github.com/MVelden1" target="_blank" class="btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
-        </div>
+<div id="top"></div>
+
+<!-- ==========================================================
+     Hero
+     ========================================================== -->
+<section class="hero wrap" id="profiel">
+  <span class="status-pill"><span class="led"></span> <span data-i18n="hero.status">Beschikbaar voor nieuwe kansen</span></span>
+
+  <div class="hero-grid">
+    <div>
+      <h1 class="hero-name">
+        <span id="heroText"></span><span class="caret"></span>
+      </h1>
+      <div class="hero-sub">
+        <span class="chip" data-i18n="hero.role">Software Developer</span>
+        <span>·</span>
+        <span class="chip">Java &amp; Frontend</span>
+        <span>·</span>
+        <span class="chip" data-i18n="hero.apis">API-integraties</span>
+        <span>·</span>
+        <span data-i18n="hero.location">📍 Nederland</span>
       </div>
-      <div class="hero-photo-wrap">
-        <div class="hero-photo-ring"></div>
-        <img src="assets/profile.png" alt="Mick van der Velden" class="hero-photo" />
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="scroll-line"><div class="scroll-runner"></div></div>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- PROFIEL -->
-    <section id="profiel" class="reveal" data-num="01">
-      <div class="section-label">Persoonlijk profiel</div>
-      <h2>Wie ben ik?</h2>
-      <div class="profile-grid">
-        <p class="profile-text">
-          Software developer met ervaring in <strong>Java</strong> en <strong>frontend development</strong>,
-          met een sterke interesse in backendsystemen. In mijn werk heb ik veel gewerkt met API's en
-          systeemintegraties. Ik ben leergierig en werk graag aan technische oplossingen met impact.
-        </p>
-        <div class="profile-stats">
-          <div class="stat">
-            <span class="stat-num">2+</span>
-            <span class="stat-label">Jaar ervaring</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">2</span>
-            <span class="stat-label">Bedrijven</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">5+</span>
-            <span class="stat-label">Technologieën</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WERKERVARING -->
-    <section id="werkervaring" class="reveal" data-num="02">
-      <div class="section-label">Werkervaring</div>
-      <h2>Ervaring</h2>
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="tcard-header">
-              <div>
-                <h3>Software Developer</h3>
-                <span class="tcard-company">Deutsche Telekom Healthcare Solutions</span>
-              </div>
-              <span class="tcard-date"><i class="fa-regular fa-calendar"></i> Nov 2024 – heden</span>
-            </div>
-            <p>
-              Werkzaam als frontend developer binnen een team dat een applicatie ontwikkelt voor gebruik in
-              pathologielabs. Verantwoordelijk voor het ontwikkelen van React-componenten en pagina's,
-              waarbij ik werk met GraphQL en data uit backendsystemen integreer.
-            </p>
-            <div class="tags">
-              <span>React</span><span>GraphQL</span><span>Frontend</span><span>Healthcare</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="tcard-header">
-              <div>
-                <h3>Integratie Specialist</h3>
-                <span class="tcard-company">Copernicus Interchange Technology</span>
-              </div>
-              <span class="tcard-date"><i class="fa-regular fa-calendar"></i> Mrt 2022 – Jul 2024</span>
-            </div>
-            <p>
-              Ontwikkeld en onderhouden van integraties tussen verschillende systemen met Java, waarbij
-              gewerkt werd met dataformaten zoals JSON, XML, X12 en EDIFACT. Veel gewerkt met
-              API-koppelingen en datastromen tussen systemen.
-            </p>
-            <div class="tags">
-              <span>Java</span><span>JSON</span><span>XML</span><span>EDIFACT</span><span>API-integratie</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- OPLEIDING -->
-    <section id="opleiding" class="reveal" data-num="03">
-      <div class="section-label">Opleiding</div>
-      <h2>Opleidingen</h2>
-      <div class="edu-grid">
-
-        <div class="edu-card">
-          <div class="edu-icon"><i class="fa-solid fa-laptop-code"></i></div>
-          <div class="edu-body">
-            <h3>Software Development</h3>
-            <span class="edu-school">Novi Hogeschool, Utrecht</span>
-            <span class="edu-date">Februari 2021 – heden</span>
-          </div>
-          <span class="edu-status">Bezig</span>
-        </div>
-
-        <div class="edu-card">
-          <div class="edu-icon"><i class="fa-solid fa-dumbbell"></i></div>
-          <div class="edu-body">
-            <h3>Academie voor Lichamelijke Opvoeding</h3>
-            <span class="edu-school">Hogeschool van Amsterdam</span>
-            <span class="edu-date">September 2017 – December 2019 · Propedeuse</span>
-          </div>
-        </div>
-
-        <div class="edu-card">
-          <div class="edu-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-          <div class="edu-body">
-            <h3>Onderwijsassistent</h3>
-            <span class="edu-school">Horizon College, Alkmaar</span>
-            <span class="edu-date">September 2013 – Februari 2017</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- VAARDIGHEDEN -->
-    <section id="vaardigheden" class="reveal" data-num="04">
-      <div class="section-label">Technische vaardigheden</div>
-      <h2>Skills</h2>
-      <div class="skills-list">
-
-        <div class="skill-row">
-          <div class="skill-meta">
-            <i class="fa-brands fa-java"></i>
-            <span>Java</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-          <span class="skill-pct">85%</span>
-        </div>
-
-        <div class="skill-row">
-          <div class="skill-meta">
-            <i class="fa-brands fa-react"></i>
-            <span>React</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
-          <span class="skill-pct">80%</span>
-        </div>
-
-        <div class="skill-row">
-          <div class="skill-meta">
-            <i class="fa-solid fa-diagram-project"></i>
-            <span>GraphQL</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
-          <span class="skill-pct">70%</span>
-        </div>
-
-        <div class="skill-row">
-          <div class="skill-meta">
-            <i class="fa-solid fa-file-code"></i>
-            <span>JSON / XML</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-          <span class="skill-pct">90%</span>
-        </div>
-
-        <div class="skill-row">
-          <div class="skill-meta">
-            <i class="fa-brands fa-git-alt"></i>
-            <span>Git</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
-          <span class="skill-pct">75%</span>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- BUITEN DE CODE -->
-    <section id="buiten" class="reveal" data-num="05">
-      <div class="section-label">Buiten de code</div>
-      <h2>De mens achter de developer</h2>
-      <div class="personal-grid">
-        <div class="personal-text">
-          <p>
-            Naast het schrijven van code ben ik een <strong>fanatiek atleet</strong> en actief
-            steeplechaser. De discipline, het doorzettingsvermogen en de focus die ik op de baan
-            train, neem ik mee naar mijn werk. Of het nu gaat om een waterhindernis of een complex
-            technisch probleem — ik ga er altijd voor.
-          </p>
-        </div>
-        <div class="personal-photos">
-          <div class="photo-slot running-slot">
-            <img src="assets/running.jpg" alt="Mick van der Velden - steeplechase" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <span class="nav-logo">MV<span class="logo-dot">.</span></span>
-      <p>© 2025 Mick van der Velden</p>
-      <div class="footer-links">
-        <a href="mailto:mvelden6@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://linkedin.com/in/mick-van-der-velden" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/MVelden1" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <div class="hero-cta">
+        <a href="mailto:mvelden6@gmail.com" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span data-i18n="hero.cta.email">Stuur mij een bericht</span>
+        </a>
+        <a href="https://linkedin.com/in/mick-van-der-velden" target="_blank" rel="noopener" class="btn btn-ghost">
+          LinkedIn
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        </a>
+        <a href="https://github.com/MVelden1" target="_blank" rel="noopener" class="btn btn-ghost">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        </a>
       </div>
     </div>
-  </footer>
 
-  <script src="main.js"></script>
+    <!-- right column: terminal + photo -->
+    <div style="display: grid; gap: 24px;">
+      <div class="hero-terminal">
+        <span class="ttitle">~/mick — zsh</span>
+        <div class="tbody" id="terminal"></div>
+      </div>
+      <div class="hero-photo">
+        <div class="tape"></div>
+        <img src="assets/mick.png" alt="Portret van Mick van der Velden" />
+        <span class="sticker">Hoi! 👋</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">scroll</div>
+</section>
+
+<!-- ==========================================================
+     Marquee
+     ========================================================== -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Java <span class="star">✦</span> React <span class="star">✦</span> GraphQL <span class="star">✦</span> API-integraties <span class="star">✦</span> JSON &amp; XML <span class="star">✦</span> EDIFACT <span class="star">✦</span> Steeplechase <span class="star">✦</span> Leergierig <span class="star">✦</span></span>
+    <span>Java <span class="star">✦</span> React <span class="star">✦</span> GraphQL <span class="star">✦</span> API-integraties <span class="star">✦</span> JSON &amp; XML <span class="star">✦</span> EDIFACT <span class="star">✦</span> Steeplechase <span class="star">✦</span> Leergierig <span class="star">✦</span></span>
+  </div>
+</div>
+
+<!-- ==========================================================
+     About
+     ========================================================== -->
+<section class="section wrap reveal">
+  <span class="eyebrow" data-i18n="about.eyebrow">01 — Persoonlijk profiel</span>
+  <h2 class="section-title" data-i18n-html="about.title">Wie ik ben, in <em>één adem</em>.</h2>
+
+  <div class="about-grid">
+    <p class="about-prose" data-i18n-html="about.body">
+      Ik ben een <strong>software developer</strong> met een hart voor
+      <span class="mark">backendsystemen</span> en een neus voor hoe dingen met elkaar praten.
+      Ik werk graag met <strong>Java</strong> en <strong>React</strong>, en voel me thuis tussen
+      API's, datastromen en integraties. Leergierig, nuchter, en altijd op zoek naar
+      <em>technische oplossingen met impact</em>.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num"><span data-count="2">0</span><span class="plus">+</span></div>
+        <div class="stat-label" data-i18n="about.stat.years">jaar ervaring</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num"><span data-count="2">0</span></div>
+        <div class="stat-label" data-i18n="about.stat.companies">bedrijven</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num"><span data-count="8">0</span><span class="plus">+</span></div>
+        <div class="stat-label" data-i18n="about.stat.tech">technologieën</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num"><span data-count="5">0</span><span class="plus">x</span></div>
+        <div class="stat-label" data-i18n="about.stat.train">training per week</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     Skills
+     ========================================================== -->
+<section class="section wrap reveal" id="skills">
+  <span class="eyebrow" data-i18n="skills.eyebrow">02 — Technische vaardigheden</span>
+  <h2 class="section-title" data-i18n-html="skills.title">Waar ik <em>sterk</em> in ben.</h2>
+
+  <div class="skills-layout">
+    <div class="skills-list" id="skillsList">
+      <!-- skills injected by JS -->
+    </div>
+
+    <div class="tech-cloud">
+      <span class="tech-chip core lg">Java</span>
+      <span class="tech-chip core lg">React</span>
+      <span class="tech-chip lg">GraphQL</span>
+      <span class="tech-chip">JSON</span>
+      <span class="tech-chip">XML</span>
+      <span class="tech-chip">EDIFACT</span>
+      <span class="tech-chip">X12</span>
+      <span class="tech-chip">REST</span>
+      <span class="tech-chip">Git</span>
+      <span class="tech-chip">TypeScript</span>
+      <span class="tech-chip">HTML/CSS</span>
+      <span class="tech-chip">Spring</span>
+      <span class="tech-chip">SQL</span>
+      <span class="tech-chip">Postman</span>
+      <span class="tech-chip">Agile / Scrum</span>
+      <span class="tech-chip">Jira</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     Experience
+     ========================================================== -->
+<section class="section wrap reveal" id="ervaring">
+  <span class="eyebrow" data-i18n="xp.eyebrow">03 — Werkervaring</span>
+  <h2 class="section-title" data-i18n-html="xp.title">Waar ik tot nu toe heb <em>gebouwd</em>.</h2>
+
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<!-- ==========================================================
+     Playground (interactive demo)
+     ========================================================== -->
+<section class="section wrap reveal" id="playground">
+  <span class="eyebrow" data-i18n="pg.eyebrow">04 — Live demo</span>
+  <h2 class="section-title" data-i18n-html="pg.title">Een kijkje in de <em>code</em>.</h2>
+  <p style="max-width: 60ch; color: var(--ink-soft); margin-bottom: 28px; font-size: 17px;" data-i18n-html="pg.intro">
+    Een kleine integratie-simulator. Links staat code die een inkomende order-payload (JSON of EDIFACT)
+    omzet naar een genormaliseerd intern formaat — precies het soort werk dat ik dagelijks deed bij Copernicus.
+    <strong>Druk op <em>Run</em></strong> om het te proberen, of wissel van input.
+  </p>
+
+  <div class="playground">
+    <div class="pg-pane">
+      <div class="pg-head">
+        <span>OrderMapper.java</span>
+        <div class="tabs">
+          <button class="tab active" data-input="json">JSON</button>
+          <button class="tab" data-input="edifact">EDIFACT</button>
+          <button class="tab" data-input="xml">XML</button>
+        </div>
+      </div>
+      <pre class="pg-code" id="codeBlock"></pre>
+    </div>
+    <div class="pg-pane">
+      <div class="pg-head">
+        <span>stdout</span>
+        <div class="pg-run">
+          <button id="runBtn" class="pg-btn">
+            <svg viewBox="0 0 10 10" fill="currentColor"><path d="M2 1l7 4-7 4z"/></svg>
+            Run
+          </button>
+        </div>
+      </div>
+      <div class="pg-out" id="output">
+        <div class="line res" style="color: var(--ink-muted);">> klaar om te runnen...</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     Education
+     ========================================================== -->
+<section class="section wrap reveal" id="opleiding">
+  <span class="eyebrow" data-i18n="edu.eyebrow">05 — Opleiding</span>
+  <h2 class="section-title" data-i18n-html="edu.title">Waar ik het <em>geleerd</em> heb.</h2>
+
+  <div class="edu-grid">
+    <div class="edu">
+      <span class="edu-num">01</span>
+      <div class="edu-year"><span data-i18n="edu.now.year">2021 — heden</span></div>
+      <div class="edu-title" data-i18n="edu.now.title">Software Development</div>
+      <div class="edu-school">Novi Hogeschool, Utrecht</div>
+      <span class="edu-status live" data-i18n="edu.status.live">Bezig</span>
+    </div>
+    <div class="edu">
+      <span class="edu-num">02</span>
+      <div class="edu-year">2017 — 2019</div>
+      <div class="edu-title" data-i18n="edu.pe.title">Lichamelijke opvoeding</div>
+      <div class="edu-school">Hogeschool van Amsterdam</div>
+      <span class="edu-status" data-i18n="edu.status.prop">Propedeuse</span>
+    </div>
+    <div class="edu">
+      <span class="edu-num">03</span>
+      <div class="edu-year">2013 — 2017</div>
+      <div class="edu-title" data-i18n="edu.ta.title">Onderwijsassistent</div>
+      <div class="edu-school">Horizon College, Alkmaar</div>
+      <span class="edu-status" data-i18n="edu.status.done">Afgerond</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     Buiten de code
+     ========================================================== -->
+<section class="section wrap reveal buiten" id="buiten">
+  <span class="eyebrow" data-i18n="out.eyebrow">06 — Buiten de code</span>
+  <h2 class="section-title" data-i18n-html="out.title">De mens achter de <em>developer</em>.</h2>
+
+  <div class="buiten-grid">
+    <div class="buiten-photo">
+      <img src="assets/running.jpg" alt="Mick van der Velden tijdens een hardloopwedstrijd" />
+      <span class="frame-sticker" data-i18n="out.sticker">Op de baan</span>
+    </div>
+
+    <div>
+      <p class="buiten-prose" data-i18n-html="out.body">
+        Naast het schrijven van code ben ik een <strong>fanatiek hardloper</strong>.
+        De <span class="mark">discipline</span>, het doorzettingsvermogen en de focus die ik in
+        mijn trainingen opbouw, neem ik mee naar mijn werk. Of het nu gaat om een zware
+        intervalsessie of een complex technisch probleem — <em>ik ga er altijd voor</em>.
+      </p>
+
+      <div class="buiten-meta">
+        <div class="cell">
+          <div class="k" data-i18n="out.k1">Sport</div>
+          <div class="v" data-i18n="out.v1">Hardlopen</div>
+        </div>
+        <div class="cell">
+          <div class="k" data-i18n="out.k2">Mindset</div>
+          <div class="v" data-i18n="out.v2">Stap voor stap</div>
+        </div>
+        <div class="cell">
+          <div class="k" data-i18n="out.k3">Transfer</div>
+          <div class="v" data-i18n-html="out.v3">Focus &amp; uithouding</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     Contact
+     ========================================================== -->
+<section class="section wrap reveal" id="contact">
+  <span class="eyebrow" data-i18n="ct.eyebrow">07 — Laten we praten</span>
+  <h2 class="section-title" data-i18n-html="ct.title">Een <em>vacature</em>, koffie, of iets tussenin?</h2>
+
+  <div class="contact-grid">
+    <div>
+      <p class="contact-note" data-i18n-html="ct.note">
+        Ik sta open voor <em>nieuwe kansen</em> waar ik met Java, frontend of
+        integratiewerk kan bijdragen. Stuur een berichtje — ik reageer meestal
+        <em>binnen een dag</em>.
+      </p>
+
+      <div class="contact-links">
+        <a href="mailto:mvelden6@gmail.com" class="contact-link" id="emailCopy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span class="label">mvelden6@gmail.com</span>
+          <span class="copied-hint" data-i18n="ct.copy">klik om te kopiëren</span>
+        </a>
+        <a href="https://linkedin.com/in/mick-van-der-velden" target="_blank" rel="noopener" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v12H.22V8zm7.36 0h4.37v1.64h.06c.61-1.15 2.1-2.36 4.33-2.36 4.63 0 5.48 3.05 5.48 7v5.72h-4.55v-5.07c0-1.21-.02-2.77-1.69-2.77-1.7 0-1.96 1.32-1.96 2.68v5.16H7.58V8z"/></svg>
+          <span class="label">linkedin.com/in/mick-van-der-velden</span>
+          <span class="copied-hint" data-i18n="ct.newtab">open in nieuw tabblad</span>
+        </a>
+        <a href="https://github.com/MVelden1" target="_blank" rel="noopener" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.3v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>
+          <span class="label">github.com/MVelden1</span>
+          <span class="copied-hint" data-i18n="ct.newtab">open in nieuw tabblad</span>
+        </a>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <h3 data-i18n="form.title">Liever een bericht?</h3>
+      <!-- Web3Forms: replace the access_key with your own from https://web3forms.com to receive mails at mvelden6@gmail.com -->
+      <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY" />
+      <input type="hidden" name="subject" value="Nieuw bericht via cv-site" />
+      <input type="hidden" name="from_name" value="CV Mick van der Velden" />
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+      <div class="form-row">
+        <label for="f-name" data-i18n="form.name">Naam</label>
+        <input type="text" id="f-name" name="name" data-i18n-ph="form.name.ph" placeholder="Hoe heet je?" required />
+      </div>
+      <div class="form-row">
+        <label for="f-email" data-i18n="form.email">E-mail</label>
+        <input type="email" id="f-email" name="email" data-i18n-ph="form.email.ph" placeholder="jij@bedrijf.nl" required />
+      </div>
+      <div class="form-row">
+        <label for="f-msg" data-i18n="form.msg">Bericht</label>
+        <textarea id="f-msg" name="message" rows="4" data-i18n-ph="form.msg.ph" placeholder="Vertel kort iets over de rol…" required></textarea>
+      </div>
+      <button type="submit" id="formSubmit" class="btn btn-accent" style="width: 100%; justify-content: center;">
+        <span data-i18n="form.send">Verzenden</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </button>
+      <div class="form-success" id="formSuccess" data-i18n="form.success">
+        ✓ Bedankt! Je bericht is verstuurd. Ik reageer zo snel mogelijk.
+      </div>
+      <div class="form-success" id="formError" style="background: color-mix(in oklab, #E36161 25%, transparent);" data-i18n="form.error">
+        ⚠ Er ging iets mis. Probeer het later opnieuw of mail direct naar mvelden6@gmail.com
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ==========================================================
+     Footer
+     ========================================================== -->
+<footer class="wrap">
+  <div class="foot">
+    <span>© 2026 Mick van der Velden. Gebouwd met veel koffie ☕ en een beetje cadence.</span>
+    <span id="timeNow"></span>
+  </div>
+</footer>
+
+<!-- ==========================================================
+     Tweaks panel
+     ========================================================== -->
+<div class="tweaks" id="tweaksPanel">
+  <h4>Tweaks</h4>
+  <div class="row">
+    <label>Esthetiek</label>
+    <div class="tweak-seg" id="segAesthetic">
+      <button data-v="default" class="on">Krant</button>
+      <button data-v="terminal">Terminal</button>
+      <button data-v="bold">Poster</button>
+    </div>
+  </div>
+  <div class="row">
+    <label>Thema</label>
+    <div class="tweak-seg" id="segTheme" style="grid-template-columns: 1fr 1fr;">
+      <button data-v="light" class="on">Licht</button>
+      <button data-v="dark">Donker</button>
+    </div>
+  </div>
+  <div class="row">
+    <label>Accentkleur</label>
+    <div class="tweak-acc-row" id="segAccent">
+      <button class="tweak-acc on" data-c="#C65A2E" style="background:#C65A2E"></button>
+      <button class="tweak-acc" data-c="#E24D1A" style="background:#E24D1A"></button>
+      <button class="tweak-acc" data-c="#D9A441" style="background:#D9A441"></button>
+      <button class="tweak-acc" data-c="#6E7F5C" style="background:#6E7F5C"></button>
+      <button class="tweak-acc" data-c="#3A6EA5" style="background:#3A6EA5"></button>
+      <button class="tweak-acc" data-c="#B5426B" style="background:#B5426B"></button>
+    </div>
+  </div>
+  <div class="row">
+    <label>Dichtheid</label>
+    <div class="tweak-seg" id="segDensity" style="grid-template-columns: 1fr 1fr;">
+      <button data-v="spacious" class="on">Ruim</button>
+      <button data-v="compact">Compact</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================================
+     Edit-mode defaults (persisted by host)
+     ========================================================== -->
+<script>
+  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "aesthetic": "default",
+    "theme": "light",
+    "accent": "#C65A2E",
+    "density": "spacious"
+  }/*EDITMODE-END*/;
+</script>
+
+<script src="main.js"></script>
 </body>
 </html>
