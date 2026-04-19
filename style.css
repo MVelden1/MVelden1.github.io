@@ -17,7 +17,7 @@
   --accent-3: #D9A441;   /* mustard */
   --hi: #F2D9B8;         /* highlighter */
 
-  --ff-display: "Instrument Serif", "Times New Roman", serif;
+  --ff-display: "Geist", ui-sans-serif, system-ui, sans-serif;
   --ff-body: "Geist", ui-sans-serif, system-ui, sans-serif;
   --ff-mono: "JetBrains Mono", ui-monospace, monospace;
 
@@ -94,7 +94,7 @@
   --accent-2: #2D5D4C;
   --accent-3: #F2B705;
   --hi: #F2B705;
-  --ff-display: "Instrument Serif", serif;
+  --ff-display: "Geist", ui-sans-serif, system-ui, sans-serif;
 }
 :root[data-theme="dark"][data-aesthetic="bold"] {
   --bg: #0D0906;
@@ -143,8 +143,8 @@ body::before {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--ff-display), serif;
-  font-weight: 400;
+  font-family: var(--ff-display);
+  font-weight: 600;
   letter-spacing: -0.01em;
   margin: 0;
   color: var(--ink);
@@ -232,7 +232,7 @@ a:hover { color: var(--accent); }
   display: flex;
   align-items: baseline;
   gap: 10px;
-  font-family: var(--ff-display), serif;
+  font-family: var(--ff-display);
   font-size: 22px;
 }
 .brand .dot {
@@ -321,7 +321,7 @@ a:hover { color: var(--accent); }
 }
 
 .hero-name {
-  font-family: var(--ff-display), serif;
+  font-family: var(--ff-display);
   font-size: clamp(64px, 11vw, 164px);
   line-height: 0.92;
   letter-spacing: -0.025em;
@@ -493,7 +493,7 @@ a:hover { color: var(--accent); }
   padding: 14px 0;
   overflow: hidden;
   background: var(--bg-elev);
-  font-family: var(--ff-display), serif;
+  font-family: var(--ff-display);
   font-size: 28px;
   font-style: italic;
   color: var(--ink-soft);
@@ -524,7 +524,7 @@ a:hover { color: var(--accent); }
 }
 
 .about-prose {
-  font-family: var(--ff-display), serif;
+  font-family: var(--ff-display);
   font-size: clamp(24px, 2.8vw, 34px);
   line-height: 1.32;
   color: var(--ink);
@@ -556,7 +556,7 @@ a:hover { color: var(--accent); }
   background: radial-gradient(circle, color-mix(in oklab, var(--accent) 18%, transparent), transparent 65%);
 }
 .stat-num {
-  font-family: var(--ff-display), serif;
+  font-family: var(--ff-display);
   font-size: 56px;
   line-height: 1;
   color: var(--accent);
@@ -609,7 +609,7 @@ a:hover { color: var(--accent); }
   margin-bottom: 10px;
 }
 .skill-name {
-  font-family: var(--ff-display), serif;
+  font-family: var(--ff-display);
   font-size: 28px;
 }
 .skill-pct {
@@ -748,7 +748,7 @@ a:hover { color: var(--accent); }
   gap: 14px;
 }
 .xp-role {
-  font-family: var(--ff-display), serif;
+  font-family: var(--ff-display);
   font-size: clamp(28px, 3vw, 38px);
   line-height: 1.1;
 }
@@ -844,7 +844,7 @@ a:hover { color: var(--accent); }
   text-transform: uppercase;
 }
 .edu .edu-title {
-  font-family: var(--ff-display), serif;
+  font-family: var(--ff-display);
   font-size: 28px;
   line-height: 1.15;
   margin: 10px 0 6px;
@@ -867,7 +867,7 @@ a:hover { color: var(--accent); }
 .edu .edu-num {
   position: absolute;
   right: 12px; top: 8px;
-  font-family: var(--ff-display), serif;
+  font-family: var(--ff-display);
   font-size: 80px;
   line-height: 1;
   color: color-mix(in oklab, var(--accent) 10%, transparent);
@@ -917,8 +917,13 @@ a:hover { color: var(--accent); }
 .pg-head .tab {
   padding: 4px 10px;
   border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: var(--ink-muted);
   cursor: pointer;
-  transition: background .15s;
+  font-family: var(--ff-mono), monospace;
+  font-size: 11px;
+  transition: background .15s, color .15s;
 }
 .pg-head .tab:hover { background: color-mix(in oklab, var(--ink) 6%, transparent); }
 .pg-head .tab.active { background: var(--ink); color: var(--bg); }
@@ -962,6 +967,20 @@ a:hover { color: var(--accent); }
 }
 .pg-btn:hover { background: var(--ink); }
 .pg-btn svg { width: 10px; height: 10px; }
+
+.pg-steps {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  font-family: var(--ff-mono), monospace;
+  font-size: 11px;
+  color: var(--ink-muted);
+  border-bottom: 1px solid color-mix(in oklab, var(--rule) 10%, transparent);
+}
+.pg-sep { opacity: 0.35; }
+.pg-step { transition: color .2s; }
+.pg-step.active { color: var(--accent); font-weight: 600; }
 
 .pg-out {
   padding: 18px 20px;
@@ -1045,7 +1064,7 @@ a:hover { color: var(--accent); }
 }
 
 .buiten-prose {
-  font-family: var(--ff-display), serif;
+  font-family: var(--ff-display);
   font-size: clamp(22px, 2.4vw, 30px);
   line-height: 1.35;
   color: var(--ink);
@@ -1082,7 +1101,7 @@ a:hover { color: var(--accent); }
   color: var(--accent);
 }
 .buiten-meta .v {
-  font-family: var(--ff-display), serif;
+  font-family: var(--ff-display);
   font-size: clamp(18px, 1.6vw, 22px);
   line-height: 1.25;
   color: var(--ink);
@@ -1109,7 +1128,7 @@ a:hover { color: var(--accent); }
 }
 
 .contact-note {
-  font-family: var(--ff-display), serif;
+  font-family: var(--ff-display);
   font-size: clamp(28px, 3vw, 40px);
   line-height: 1.3;
 }
@@ -1235,7 +1254,7 @@ footer {
 }
 .tweaks.open { display: block; animation: fadeUp .3s ease; }
 .tweaks h4 {
-  font-family: var(--ff-display), serif;
+  font-family: var(--ff-display);
   font-size: 22px;
   margin-bottom: 12px;
 }
@@ -1385,11 +1404,12 @@ footer {
     margin-bottom: 2mm;
   }
   .ps-name {
-    font-family: "Instrument Serif", "Times New Roman", serif;
+    font-family: "Geist", "Helvetica Neue", Arial, sans-serif;
     font-size: 30pt;
+    font-weight: 700;
     line-height: 0.98;
     margin: 0 0 1.8mm;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     color: #F4EDE1;
   }
   .ps-role {
@@ -1398,7 +1418,7 @@ footer {
     color: #D7C8B4;
     letter-spacing: 0.02em;
     font-style: italic;
-    font-family: "Instrument Serif", "Times New Roman", serif;
+    font-family: "Geist", "Helvetica Neue", Arial, sans-serif;
   }
   .ps-rule {
     width: 14mm;
@@ -1461,9 +1481,9 @@ footer {
 
   .ps-h {
     position: relative;
-    font-family: "Instrument Serif", "Times New Roman", serif;
+    font-family: "Geist", "Helvetica Neue", Arial, sans-serif;
     font-size: 13pt;
-    font-weight: 400;
+    font-weight: 600;
     margin: 0 0 3mm;
     padding-bottom: 1.5mm;
     color: var(--ps-ink);
@@ -1533,9 +1553,9 @@ footer {
     margin-bottom: 0.5mm;
   }
   .ps-edu-title {
-    font-family: "Instrument Serif", "Times New Roman", serif;
+    font-family: "Geist", "Helvetica Neue", Arial, sans-serif;
     font-size: 11pt;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.15;
     color: var(--ps-ink);
   }
@@ -1580,9 +1600,9 @@ footer {
     margin-bottom: 2mm;
   }
   .ps-xp-role {
-    font-family: "Instrument Serif", "Times New Roman", serif;
+    font-family: "Geist", "Helvetica Neue", Arial, sans-serif;
     font-size: 14pt;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0;
     line-height: 1.1;
     color: var(--ps-ink);

@@ -25,10 +25,10 @@
       'about.eyebrow': '01 — Persoonlijk profiel',
       'about.title': 'Wie ik ben, in <em>één adem</em>.',
       'about.body':
-        'Software developer met focus op <strong>backend-integraties</strong> en ' +
-        '<strong>React</strong>-frontends. Bouw en onderhoud API-koppelingen (REST, GraphQL) en verwerk ' +
-        '<span class="mark">datastromen</span> als JSON, XML, EDIFACT en X12. Pragmatisch, leergierig ' +
-        'en gericht op <em>betrouwbare, onderhoudbare oplossingen</em>.',
+        'Software developer gespecialiseerd in <strong>Java</strong> en <strong>React</strong>, ' +
+        'met focus op het bouwen van robuuste <span class="mark">API-integraties</span> tussen complexe systemen. ' +
+        'Werkt met REST, GraphQL en data-formaten als JSON, XML, EDIFACT en X12. Pragmatisch, gedreven ' +
+        'en gericht op <em>schaalbare en betrouwbare oplossingen</em>.',
       'about.stat.years': 'jaar ervaring',
       'about.stat.companies': 'bedrijven',
       'about.stat.tech': 'technologieën',
@@ -44,7 +44,7 @@
       'pg.title': 'Een kijkje in de <em>code</em>.',
       'pg.intro':
         'Een kleine integratie-simulator. Links staat code die een inkomende order-payload (JSON of EDIFACT) ' +
-        'omzet naar een genormaliseerd intern formaat — precies het soort werk dat ik dagelijks deed bij Copernicus. ' +
+        'omzet naar een genormaliseerd intern formaat. Precies het soort werk dat ik dagelijks deed bij Copernicus. ' +
         '<strong>Druk op <em>Run</em></strong> om het te proberen, of wissel van input.',
       'pg.ready': '> klaar om te runnen...',
       'pg.compile': '▸ compiling OrderMapper.java ...',
@@ -69,7 +69,7 @@
         'Naast het schrijven van code ben ik een <strong>fanatiek hardloper</strong>. ' +
         'De <span class="mark">discipline</span>, het doorzettingsvermogen en de focus die ik in ' +
         'mijn trainingen opbouw, neem ik mee naar mijn werk. Of het nu gaat om een zware ' +
-        'intervalsessie of een complex technisch probleem — <em>ik ga er altijd voor</em>.',
+        'intervalsessie of een complex technisch probleem: <em>ik ga er altijd voor</em>.',
       'out.sticker': 'Op de baan',
       'out.k1': 'Sport',
       'out.k2': 'Mindset',
@@ -81,9 +81,8 @@
       'ct.eyebrow': '07 — Laten we praten',
       'ct.title': 'Een <em>vacature</em>, koffie, of iets tussenin?',
       'ct.note':
-        'Ik sta open voor <em>nieuwe kansen</em> waar ik met Java, frontend of ' +
-        'integratiewerk kan bijdragen. Stuur een berichtje — ik reageer meestal ' +
-        '<em>binnen een dag</em>.',
+        'Ik sta open voor <em>nieuwe kansen</em> waar ik met Java, frontend ' +
+        'kan bijdragen. Stuur gerust een berichtje.',
       'ct.copy': 'klik om te kopiëren',
       'ct.copied': 'gekopieerd! ✓',
       'ct.newtab': 'open in nieuw tabblad',
@@ -106,7 +105,7 @@
       'term.whoami.res': '→ Software Developer · Java &amp; Frontend · integraties',
       'term.ls':     '$ <span class="cmd">ls skills/</span>',
       'term.cat':    '$ <span class="cmd">cat status.txt</span>',
-      'term.status': '"Beschikbaar voor nieuwe kansen — laten we praten."',
+      'term.status': '"Beschikbaar voor nieuwe kansen. Laten we praten."',
 
       'marquee.running': 'Hardlopen',
       'marquee.curious': 'Leergierig',
@@ -121,7 +120,7 @@
       'print.lang.nl': 'Nederlands',
       'print.lang.en': 'Engels',
       'print.summary':
-        'Software developer gespecialiseerd in Java-backends en React-frontends,' +
+        'Software developer gespecialiseerd in Java en React, ' +
         'met focus op het bouwen van robuuste API-integraties tussen complexe systemen.' +
         'Gericht op schaalbare en betrouwbare oplossingen in data-intensieve omgevingen.' +
         'Bouwt koppelingen tussen systemen met REST, GraphQL en data-formaten ' +
@@ -147,10 +146,10 @@
       'about.eyebrow': '01 — Personal profile',
       'about.title': 'Who I am, in <em>one breath</em>.',
       'about.body':
-        'Software developer focused on <strong>backend integrations</strong> and ' +
-        '<strong>React</strong> frontends. Build and maintain API couplings (REST, GraphQL) and process ' +
-        '<span class="mark">data flows</span> like JSON, XML, EDIFACT and X12. Pragmatic, curious ' +
-        'and focused on <em>reliable, maintainable solutions</em>.',
+        'Software developer specialised in <strong>Java</strong> and <strong>React</strong>, ' +
+        'focused on building robust <span class="mark">API integrations</span> between complex systems. ' +
+        'Works with REST, GraphQL and data formats like JSON, XML, EDIFACT and X12. Pragmatic, driven ' +
+        'and focused on <em>scalable and reliable solutions</em>.',
       'about.stat.years': 'years of experience',
       'about.stat.companies': 'companies',
       'about.stat.tech': 'technologies',
@@ -191,7 +190,7 @@
         "When I&rsquo;m not writing code I&rsquo;m a <strong>fanatical runner</strong>. " +
         'The <span class="mark">discipline</span>, grit and focus I build on the track ' +
         "come with me to work. Whether it&rsquo;s a brutal interval session or a gnarly technical " +
-        'problem — <em>I keep going</em>.',
+        'problem: <em>I keep going</em>.',
       'out.sticker': 'On the track',
       'out.k1': 'Sport',
       'out.k2': 'Mindset',
@@ -204,7 +203,7 @@
       'ct.title': 'A <em>role</em>, a coffee, or something in between?',
       'ct.note':
         "I&rsquo;m open to <em>new opportunities</em> where I can contribute with Java, frontend or " +
-        'integration work. Drop me a line — I usually reply ' +
+        'integration work. Feel free to drop me a line, I usually reply ' +
         '<em>within a day</em>.',
       'ct.copy': 'click to copy',
       'ct.copied': 'copied! ✓',
@@ -228,7 +227,7 @@
       'term.whoami.res': '→ Software Developer · Java &amp; Frontend · integrations',
       'term.ls':     '$ <span class="cmd">ls skills/</span>',
       'term.cat':    '$ <span class="cmd">cat status.txt</span>',
-      'term.status': '"Open to new opportunities — let&rsquo;s talk."',
+      'term.status': '"Open to new opportunities. Let&rsquo;s talk."',
 
       'marquee.apis': 'API integrations',
       'marquee.running': 'Running',
@@ -275,7 +274,7 @@
             <p>Frontend developer voor een healthcare-kritische applicatie voor pathologielabs,
             met focus op React en GraphQL-integraties.</p>
             <ul>
-              <li>Ontwikkellen van <strong>React-componenten</strong> en pagina&rsquo;s met focus op bruikbaarheid.</li>
+              <li>Ontwikkelen van <strong>React-componenten</strong> en pagina&rsquo;s met focus op bruikbaarheid.</li>
               <li>Integreer backenddata via <strong>GraphQL</strong>-queries.</li>
               <li>Lever features op in sprints binnen een Scrum-team.</li>
             </ul>`,
@@ -366,7 +365,7 @@
             <ul>
               <li>Build <strong>React components</strong> and pages with a focus on usability.</li>
               <li>Integrate backend data through <strong>GraphQL</strong> queries and schema work.</li>
-              <li>Ship features in short iterations within an Scrum team.</li>
+              <li>Ship features in short iterations within a Scrum team.</li>
             </ul>`,
           tags: ['React', 'GraphQL', 'Frontend', 'Healthcare'],
         },
@@ -690,9 +689,22 @@
     codeBlock.innerHTML = DATA[lang].code[currentInput];
   }
 
+  const pgSteps = document.getElementById('pgSteps');
+  function resetSteps() {
+    if (!pgSteps) return;
+    pgSteps.querySelectorAll('.pg-step').forEach(s => s.classList.remove('active'));
+  }
+  function activateStep(n) {
+    if (!pgSteps) return;
+    pgSteps.querySelectorAll('.pg-step').forEach(s => s.classList.remove('active'));
+    const el = pgSteps.querySelector(`[data-step="${n}"]`);
+    if (el) el.classList.add('active');
+  }
+
   function resetPlaygroundOutput() {
     if (!output) return;
     output.innerHTML = `<div class="line res" style="color: var(--ink-muted);">${t('pg.ready')}</div>`;
+    resetSteps();
   }
 
   document.querySelectorAll('.pg-head .tab').forEach(tab => {
@@ -716,12 +728,13 @@
   if (runBtn) {
     runBtn.addEventListener('click', () => {
       output.innerHTML = '';
+      resetSteps();
       const ms = (Math.random() * 18 + 12).toFixed(1);
       const steps = [
-        { html: '<span style="color: var(--ink-muted);">' + t('pg.compile') + '</span>' },
-        { html: '<span style="color: var(--ink-muted);">' + t('pg.parse').replace('{FORMAT}', currentInput.toUpperCase()) + '</span>' },
-        { html: '<span style="color: var(--accent-2);">' + t('pg.mapped') + '</span>' },
-        { html: '<br/><span style="color: var(--ink-muted);">' + t('pg.result') + '</span>' },
+        { html: '<span style="color: var(--ink-muted);">' + t('pg.compile') + '</span>', pgStep: 1 },
+        { html: '<span style="color: var(--ink-muted);">' + t('pg.parse').replace('{FORMAT}', currentInput.toUpperCase()) + '</span>', pgStep: 2 },
+        { html: '<span style="color: var(--accent-2);">' + t('pg.mapped') + '</span>', pgStep: 3 },
+        { html: '<br/><span style="color: var(--ink-muted);">' + t('pg.result') + '</span>', pgStep: 4 },
         { json: true },
         { html: '<br/><span style="color: var(--accent);">' + t('pg.done').replace('{MS}', ms) + '</span>' },
       ];
@@ -729,6 +742,7 @@
       (function tick() {
         if (di >= steps.length) return;
         const s = steps[di];
+        if (s.pgStep) activateStep(s.pgStep);
         const line = document.createElement('div');
         line.className = 'line';
         if (s.json) {
