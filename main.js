@@ -110,7 +110,7 @@
       'marquee.running': 'Hardlopen',
       'marquee.curious': 'Leergierig',
 
-      'print.role': 'Software Developer · Java & Frontend · API-integraties',
+      'print.role': 'Software Developer · Java & Frontend',
       'print.profile': 'Profiel',
       'print.skills': 'Vaardigheden',
       'print.experience': 'Werkervaring',
@@ -230,7 +230,7 @@
       'marquee.running': 'Running',
       'marquee.curious': 'Curious',
 
-      'print.role': 'Software Developer · Java & Frontend · API integrations',
+      'print.role': 'Software Developer · Java & Frontend',
       'print.profile': 'Profile',
       'print.skills': 'Skills',
       'print.experience': 'Experience',
