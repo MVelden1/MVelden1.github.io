@@ -343,7 +343,10 @@
       <input type="hidden" name="access_key" value="7c4b0fd3-1f38-485e-ab42-254aa99e8355" />
       <input type="hidden" name="subject" value="Nieuw bericht via cv-site" />
       <input type="hidden" name="from_name" value="CV Mick van der Velden" />
-      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+      <div style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;">
+        <label for="botcheck">Laat dit veld leeg</label>
+        <input type="checkbox" id="botcheck" name="botcheck" tabindex="-1" autocomplete="off" />
+      </div>
       <div class="form-row">
         <label for="f-name" data-i18n="form.name">Naam</label>
         <input type="text" id="f-name" name="name" data-i18n-ph="form.name.ph" placeholder="Hoe heet je?" required />
