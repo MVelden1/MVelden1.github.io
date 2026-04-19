@@ -79,9 +79,9 @@
       'out.v3': 'Focus &amp; uithouding',
 
       'ct.eyebrow': '07 — Laten we praten',
-      'ct.title': 'Een <em>vacature</em>, koffie, of iets tussenin?',
+      'ct.title': 'Een <em>vacature</em>, koffie of iets tussenin?',
       'ct.note':
-        'Ik sta open voor <em>nieuwe kansen</em> waar ik met Java, frontend ' +
+        'Ik sta open voor <em>nieuwe kansen</em> waar ik met Java en frontend ' +
         'kan bijdragen. Stuur gerust een berichtje.',
       'ct.copy': 'klik om te kopiëren',
       'ct.copied': 'gekopieerd! ✓',
@@ -98,7 +98,7 @@
       'form.success': '✓ Bedankt! Je bericht is verstuurd. Ik reageer zo snel mogelijk.',
       'form.error': '⚠ Er ging iets mis. Probeer het later opnieuw of mail direct naar mvelden6@gmail.com',
 
-      'footer.copy': '© 2026 Mick van der Velden. Gebouwd met veel koffie ☕ en een beetje cadence.',
+      'footer.copy': '© 2026 Mick van der Velden. Gebouwd met veel cola 🥤 en een beetje cadence.',
       'footer.city': 'Amsterdam',
 
       'term.whoami': '$ <span class="cmd">whoami</span>',
@@ -139,7 +139,6 @@
 
       'hero.status': 'Open to new opportunities',
       'hero.role': 'Software Developer',
-      'hero.apis': 'API integrations',
       'hero.location': '📍 Netherlands',
       'hero.cta.email': 'Send me a message',
 
@@ -165,7 +164,7 @@
       'pg.title': 'A peek at the <em>code</em>.',
       'pg.intro':
         'A tiny integration simulator. On the left, code that takes an incoming order payload (JSON or EDIFACT) ' +
-        'and normalises it into an internal model — exactly the kind of work I did daily at Copernicus. ' +
+        'and normalises it into an internal model. Exactly the kind of work I did daily at Copernicus. ' +
         '<strong>Hit <em>Run</em></strong> to try it, or switch inputs.',
       'pg.ready': '> ready to run...',
       'pg.compile': '▸ compiling OrderMapper.java ...',
@@ -202,9 +201,8 @@
       'ct.eyebrow': '07 — Let&rsquo;s talk',
       'ct.title': 'A <em>role</em>, a coffee, or something in between?',
       'ct.note':
-        "I&rsquo;m open to <em>new opportunities</em> where I can contribute with Java, frontend or " +
-        'integration work. Feel free to drop me a line, I usually reply ' +
-        '<em>within a day</em>.',
+        "I&rsquo;m open to <em>new opportunities</em> where I can contribute with Java and frontend work. " +
+        'Feel free to reach out.',
       'ct.copy': 'click to copy',
       'ct.copied': 'copied! ✓',
       'ct.newtab': 'opens in a new tab',
@@ -220,7 +218,7 @@
       'form.success': '✓ Thanks! Your message is on its way. I&rsquo;ll reply as soon as I can.',
       'form.error': '⚠ Something went wrong. Please try again later or email mvelden6@gmail.com directly.',
 
-      'footer.copy': '© 2026 Mick van der Velden. Built with too much coffee ☕ and a bit of cadence.',
+      'footer.copy': '© 2026 Mick van der Velden. Built with too much cola 🥤 and a bit of cadence.',
       'footer.city': 'Amsterdam',
 
       'term.whoami': '$ <span class="cmd">whoami</span>',
@@ -229,7 +227,6 @@
       'term.cat':    '$ <span class="cmd">cat status.txt</span>',
       'term.status': '"Open to new opportunities. Let&rsquo;s talk."',
 
-      'marquee.apis': 'API integrations',
       'marquee.running': 'Running',
       'marquee.curious': 'Curious',
 
@@ -243,9 +240,10 @@
       'print.lang.nl': 'Dutch',
       'print.lang.en': 'English',
       'print.summary':
-        'Software developer with experience in Java backends, React frontends and ' +
-        'API integrations. Builds couplings between systems using REST, GraphQL and data formats ' +
-        'like JSON, XML, EDIFACT and X12. Pragmatic, driven and focused on reliable solutions.',
+        'Software developer specialised in Java and React, focused on building robust API integrations between complex systems. ' +
+        'Aimed at scalable and reliable solutions in data-intensive environments. ' +
+        'Builds connections between systems using REST, GraphQL and data formats like JSON, XML, EDIFACT and X12. ' +
+        'Pragmatic, driven and focused on reliable solutions.',
       'form.sending': 'Sending…',
     },
   };
