@@ -26,11 +26,10 @@
       'about.eyebrow': '01 — Persoonlijk profiel',
       'about.title': 'Wie ik ben, in <em>één adem</em>.',
       'about.body':
-        'Ik ben een <strong>software developer</strong> met een hart voor ' +
-        '<span class="mark">backendsystemen</span> en een neus voor hoe dingen met elkaar praten. ' +
-        'Ik werk graag met <strong>Java</strong> en <strong>React</strong>, en voel me thuis tussen ' +
-        'API&rsquo;s, datastromen en integraties. Leergierig, nuchter, en altijd op zoek naar ' +
-        '<em>technische oplossingen met impact</em>.',
+        'Software developer met focus op <strong>backend-integraties</strong> en ' +
+        '<strong>React</strong>-frontends. Bouw en onderhoud API-koppelingen (REST, GraphQL) en verwerk ' +
+        '<span class="mark">datastromen</span> als JSON, XML, EDIFACT en X12. Pragmatisch, leergierig ' +
+        'en gericht op <em>betrouwbare, onderhoudbare oplossingen</em>.',
       'about.stat.years': 'jaar ervaring',
       'about.stat.companies': 'bedrijven',
       'about.stat.tech': 'technologieën',
@@ -109,6 +108,25 @@
       'term.ls':     '$ <span class="cmd">ls skills/</span>',
       'term.cat':    '$ <span class="cmd">cat status.txt</span>',
       'term.status': '"Beschikbaar voor nieuwe kansen — laten we praten."',
+
+      'marquee.apis': 'API-integraties',
+      'marquee.running': 'Hardlopen',
+      'marquee.curious': 'Leergierig',
+
+      'print.role': 'Software Developer · Java & Frontend · API-integraties',
+      'print.profile': 'Profiel',
+      'print.skills': 'Vaardigheden',
+      'print.experience': 'Werkervaring',
+      'print.education': 'Opleiding',
+      'print.contact': 'Contact',
+      'print.languages': 'Talen',
+      'print.lang.nl': 'Nederlands — moedertaal',
+      'print.lang.en': 'Engels — professioneel',
+      'print.summary':
+        'Software developer met ervaring in Java/Spring-backends, React-frontends en ' +
+        'API-integraties. Bouwt koppelingen tussen systemen met REST, GraphQL en data-formaten ' +
+        'als JSON, XML, EDIFACT en X12. Pragmatisch, gedreven en gericht op betrouwbare oplossingen.',
+      'form.sending': 'Versturen…',
     },
 
     en: {
@@ -129,11 +147,10 @@
       'about.eyebrow': '01 — Personal profile',
       'about.title': 'Who I am, in <em>one breath</em>.',
       'about.body':
-        "I'm a <strong>software developer</strong> with a soft spot for " +
-        '<span class="mark">backend systems</span> and a nose for how things talk to each other. ' +
-        'I enjoy working with <strong>Java</strong> and <strong>React</strong>, and I feel at home between ' +
-        "APIs, data flows and integrations. Curious, pragmatic, and always looking for " +
-        '<em>technical solutions that actually matter</em>.',
+        'Software developer focused on <strong>backend integrations</strong> and ' +
+        '<strong>React</strong> frontends. Build and maintain API couplings (REST, GraphQL) and process ' +
+        '<span class="mark">data flows</span> like JSON, XML, EDIFACT and X12. Pragmatic, curious ' +
+        'and focused on <em>reliable, maintainable solutions</em>.',
       'about.stat.years': 'years of experience',
       'about.stat.companies': 'companies',
       'about.stat.tech': 'technologies',
@@ -212,6 +229,25 @@
       'term.ls':     '$ <span class="cmd">ls skills/</span>',
       'term.cat':    '$ <span class="cmd">cat status.txt</span>',
       'term.status': '"Open to new opportunities — let&rsquo;s talk."',
+
+      'marquee.apis': 'API integrations',
+      'marquee.running': 'Running',
+      'marquee.curious': 'Curious',
+
+      'print.role': 'Software Developer · Java & Frontend · API integrations',
+      'print.profile': 'Profile',
+      'print.skills': 'Skills',
+      'print.experience': 'Experience',
+      'print.education': 'Education',
+      'print.contact': 'Contact',
+      'print.languages': 'Languages',
+      'print.lang.nl': 'Dutch — native',
+      'print.lang.en': 'English — professional',
+      'print.summary':
+        'Software developer with experience in Java/Spring backends, React frontends and ' +
+        'API integrations. Builds couplings between systems using REST, GraphQL and data formats ' +
+        'like JSON, XML, EDIFACT and X12. Pragmatic, driven and focused on reliable solutions.',
+      'form.sending': 'Sending…',
     },
   };
 
@@ -225,11 +261,10 @@
   const DATA = {
     nl: {
       skills: [
-        { name: 'Java',       tags: ['Spring', 'API', 'Backend'] },
-        { name: 'React',      tags: ['Hooks', 'Components', 'Frontend'] },
-        { name: 'GraphQL',    tags: ['Queries', 'Schema'] },
-        { name: 'JSON / XML', tags: ['Mapping', 'Parsers', 'Validatie'] },
-        { name: 'Git',        tags: ['Flow', 'Code review'] },
+        { name: 'Backend',            tags: ['Java', 'Spring', 'REST', 'SQL'] },
+        { name: 'Frontend',           tags: ['React', 'TypeScript', 'HTML', 'CSS'] },
+        { name: 'Data & Integratie',  tags: ['GraphQL', 'JSON', 'XML', 'EDIFACT', 'X12'] },
+        { name: 'Tools',              tags: ['Git', 'Postman', 'Jira', 'Agile / Scrum'] },
       ],
       xp: [
         {
@@ -237,13 +272,12 @@
           company: 'Deutsche Telekom Healthcare Solutions',
           date: 'Nov 2024 — heden',
           body: `
-            <p>Werkzaam als <strong>frontend developer</strong> binnen een team dat een applicatie
-            ontwikkelt voor gebruik in pathologielabs. Ik werk aan een product dat echt impact
-            heeft op hoe labmedewerkers hun dag indelen.</p>
+            <p>Frontend developer in een cross-functioneel team dat een healthcare-kritieke applicatie
+            bouwt voor pathologielabs.</p>
             <ul>
-              <li>Ontwikkelen van <strong>React-componenten</strong> en pagina&rsquo;s met focus op bruikbaarheid.</li>
-              <li>Werken met <strong>GraphQL</strong> om data uit backendsystemen te integreren.</li>
-              <li>Samenwerken in een cross-functioneel team aan een healthcare-kritieke applicatie.</li>
+              <li>Ontwikkel <strong>React-componenten</strong> en pagina&rsquo;s met focus op bruikbaarheid.</li>
+              <li>Integreer backenddata via <strong>GraphQL</strong>-queries en schema-werk.</li>
+              <li>Lever features op in korte iteraties binnen een Agile/Scrum-team.</li>
             </ul>`,
           tags: ['React', 'GraphQL', 'Frontend', 'Healthcare'],
         },
@@ -252,12 +286,12 @@
           company: 'Copernicus Interchange Technology',
           date: 'Mrt 2022 — Jul 2024',
           body: `
-            <p>Ontwikkeld en onderhouden van <strong>integraties</strong> tussen verschillende systemen
-            met Java. De job die mijn liefde voor backendwerk heeft aangewakkerd.</p>
+            <p>Ontwierp, bouwde en onderhield Java-integraties tussen partnersystemen in een
+            B2B-omgeving.</p>
             <ul>
-              <li>Bouwen en onderhouden van API-koppelingen tussen klantsystemen.</li>
-              <li>Werken met <strong>JSON, XML, X12 en EDIFACT</strong> — alle smaken data-formaat.</li>
-              <li>Troubleshooten van datastromen in productie, samen met klanten.</li>
+              <li>Bouwde API-koppelingen tussen klantsystemen met Java en Spring.</li>
+              <li>Implementeerde parsers en mappings voor <strong>JSON, XML, X12 en EDIFACT</strong>.</li>
+              <li>Loste productiestoringen op in datastromen, in directe samenwerking met klanten.</li>
             </ul>`,
           tags: ['Java', 'JSON', 'XML', 'EDIFACT', 'API-integratie'],
         },
@@ -316,11 +350,10 @@
     },
     en: {
       skills: [
-        { name: 'Java',       tags: ['Spring', 'API', 'Backend'] },
-        { name: 'React',      tags: ['Hooks', 'Components', 'Frontend'] },
-        { name: 'GraphQL',    tags: ['Queries', 'Schema'] },
-        { name: 'JSON / XML', tags: ['Mapping', 'Parsers', 'Validation'] },
-        { name: 'Git',        tags: ['Flow', 'Code review'] },
+        { name: 'Backend',             tags: ['Java', 'Spring', 'REST', 'SQL'] },
+        { name: 'Frontend',            tags: ['React', 'TypeScript', 'HTML', 'CSS'] },
+        { name: 'Data & Integration',  tags: ['GraphQL', 'JSON', 'XML', 'EDIFACT', 'X12'] },
+        { name: 'Tools',               tags: ['Git', 'Postman', 'Jira', 'Agile / Scrum'] },
       ],
       xp: [
         {
@@ -328,13 +361,12 @@
           company: 'Deutsche Telekom Healthcare Solutions',
           date: 'Nov 2024 — present',
           body: `
-            <p>Working as a <strong>frontend developer</strong> in a team building an application
-            used inside pathology labs. I contribute to a product that actually shapes how lab
-            workers spend their day.</p>
+            <p>Frontend developer in a cross-functional team building a healthcare-critical
+            application for pathology labs.</p>
             <ul>
-              <li>Building <strong>React components</strong> and pages with a focus on usability.</li>
-              <li>Using <strong>GraphQL</strong> to integrate data from backend systems.</li>
-              <li>Collaborating in a cross-functional team on a healthcare-critical app.</li>
+              <li>Build <strong>React components</strong> and pages with a focus on usability.</li>
+              <li>Integrate backend data through <strong>GraphQL</strong> queries and schema work.</li>
+              <li>Ship features in short iterations within an Agile/Scrum team.</li>
             </ul>`,
           tags: ['React', 'GraphQL', 'Frontend', 'Healthcare'],
         },
@@ -343,12 +375,12 @@
           company: 'Copernicus Interchange Technology',
           date: 'Mar 2022 — Jul 2024',
           body: `
-            <p>Designed, built and maintained <strong>integrations</strong> between partner systems
-            in Java. The job that lit up my love for backend work.</p>
+            <p>Designed, built and maintained Java integrations between partner systems in a
+            B2B environment.</p>
             <ul>
-              <li>Building and maintaining API couplings between customer systems.</li>
-              <li>Working with <strong>JSON, XML, X12 and EDIFACT</strong> — every flavour of data format.</li>
-              <li>Troubleshooting production data flows side-by-side with customers.</li>
+              <li>Built API couplings between customer systems using Java and Spring.</li>
+              <li>Implemented parsers and mappings for <strong>JSON, XML, X12 and EDIFACT</strong>.</li>
+              <li>Resolved production data-flow issues in direct collaboration with customers.</li>
             </ul>`,
           tags: ['Java', 'JSON', 'XML', 'EDIFACT', 'API integration'],
         },
@@ -609,8 +641,10 @@
             <h3 class="xp-role">${x.role}</h3>
             <div class="xp-company">${x.company}</div>
           </div>
-          <div class="xp-date">${x.date}</div>
-          <span class="xp-toggle">+</span>
+          <div class="xp-meta">
+            <div class="xp-date">${x.date}</div>
+            <span class="xp-toggle">+</span>
+          </div>
         </div>
         <div class="xp-body">
           <div class="xp-body-inner">
@@ -715,19 +749,193 @@
 
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    const successEl = document.getElementById('formSuccess');
+    const errorEl = document.getElementById('formError');
+    const submitBtn = document.getElementById('formSubmit');
+    const submitLabel = submitBtn ? submitBtn.querySelector('span') : null;
+    const originalLabelKey = 'form.send';
+
+    function hideBanners() {
+      if (successEl) successEl.classList.remove('show');
+      if (errorEl) errorEl.classList.remove('show');
+    }
+    function showBanner(el, ms = 6000) {
+      hideBanners();
+      if (!el) return;
+      el.classList.add('show');
+      setTimeout(() => el.classList.remove('show'), ms);
+    }
+
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      document.getElementById('formSuccess').classList.add('show');
-      e.target.reset();
-      setTimeout(() => document.getElementById('formSuccess').classList.remove('show'), 4000);
+      hideBanners();
+
+      const data = new FormData(contactForm);
+      const accessKey = (data.get('access_key') || '').toString();
+      const hasRealKey = accessKey && !/YOUR-WEB3FORMS-ACCESS-KEY/i.test(accessKey);
+
+      const name = (data.get('name') || '').toString().trim();
+      const email = (data.get('email') || '').toString().trim();
+      const message = (data.get('message') || '').toString().trim();
+
+      if (!hasRealKey) {
+        const subjectText = lang === 'en'
+          ? `Message via cv site — ${name || 'unknown'}`
+          : `Bericht via cv-site — ${name || 'onbekend'}`;
+        const subject = encodeURIComponent(subjectText);
+        const body = encodeURIComponent(
+          `${message}\n\n— ${name}${email ? ' <' + email + '>' : ''}`
+        );
+        window.location.href = `mailto:mvelden6@gmail.com?subject=${subject}&body=${body}`;
+        showBanner(successEl);
+        contactForm.reset();
+        return;
+      }
+
+      if (submitBtn) submitBtn.disabled = true;
+      if (submitLabel) submitLabel.textContent = t('form.sending');
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data,
+        });
+        const json = await res.json().catch(() => ({}));
+        if (res.ok && json.success) {
+          showBanner(successEl);
+          contactForm.reset();
+        } else {
+          showBanner(errorEl);
+        }
+      } catch {
+        showBanner(errorEl);
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+        if (submitLabel) submitLabel.textContent = t(originalLabelKey);
+      }
     });
   }
 
   // ========================================================
-  // DOWNLOAD PDF (print)
+  // PRINT SHEET — single-page professional PDF
   // ========================================================
+  const printSheet = document.getElementById('printSheet');
+  function renderPrintSheet() {
+    if (!printSheet) return;
+    const xps = DATA[lang].xp;
+    const skills = DATA[lang].skills;
+    const eduNow = lang === 'nl' ? 'heden' : 'present';
+
+    const ic = {
+      pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+      mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>',
+      link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>',
+      gh: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.3v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>',
+      web: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>',
+    };
+
+    const eduItems = [
+      { year: '2021 — ' + eduNow, title: t('edu.now.title'), school: 'Novi Hogeschool, Utrecht', status: t('edu.status.live') },
+      { year: '2017 — 2019', title: t('edu.pe.title'), school: 'Hogeschool van Amsterdam', status: t('edu.status.prop') },
+      { year: '2013 — 2017', title: t('edu.ta.title'), school: 'Horizon College, Alkmaar', status: t('edu.status.done') },
+    ];
+
+    printSheet.innerHTML = `
+      <header class="ps-head">
+        <div class="ps-photo">
+          <img src="assets/mick.png" alt="Portret van Mick van der Velden" />
+        </div>
+        <div class="ps-id">
+          <div class="ps-eyebrow">Curriculum Vitae</div>
+          <h1 class="ps-name">Mick van der Velden</h1>
+          <p class="ps-role">${t('print.role')}</p>
+          <div class="ps-rule"></div>
+          <p class="ps-tagline">${t('print.summary')}</p>
+        </div>
+      </header>
+
+      <aside class="ps-side">
+        <section class="ps-block">
+          <h2 class="ps-h">${t('print.contact')}</h2>
+          <ul class="ps-contact-list">
+            <li>${ic.pin}<span>Zaandam, NL</span></li>
+            <li>${ic.mail}<span>mvelden6@gmail.com</span></li>
+            <li>${ic.link}<span>linkedin.com/in/mick-van-der-velden</span></li>
+            <li>${ic.gh}<span>github.com/MVelden1</span></li>
+            <li>${ic.web}<span>mvelden1.github.io</span></li>
+          </ul>
+        </section>
+
+        <section class="ps-block">
+          <h2 class="ps-h">${t('print.skills')}</h2>
+          <ul class="ps-skills">
+            ${skills.map(s => `<li><strong>${s.name}</strong><span>${s.tags.join(' · ')}</span></li>`).join('')}
+          </ul>
+        </section>
+
+        <section class="ps-block">
+          <h2 class="ps-h">${t('print.languages')}</h2>
+          <ul class="ps-plain">
+            <li>${t('print.lang.nl')}</li>
+            <li>${t('print.lang.en')}</li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="ps-main">
+        <section class="ps-block">
+          <h2 class="ps-h ps-h-main"><span class="ps-num">01</span>${t('print.profile')}</h2>
+          <p class="ps-p">${t('print.summary')}</p>
+        </section>
+
+        <section class="ps-block">
+          <h2 class="ps-h ps-h-main"><span class="ps-num">02</span>${t('print.experience')}</h2>
+          ${xps.map(x => `
+            <article class="ps-xp">
+              <header>
+                <div>
+                  <h3 class="ps-xp-role">${x.role}</h3>
+                  <div class="ps-xp-co">${x.company}</div>
+                </div>
+                <div class="ps-xp-date">${x.date}</div>
+              </header>
+              <div class="ps-xp-body">${x.body}</div>
+              <div class="ps-xp-tags">${x.tags.map(tg => `<span>${tg}</span>`).join('')}</div>
+            </article>
+          `).join('')}
+        </section>
+
+        <section class="ps-block">
+          <h2 class="ps-h ps-h-main"><span class="ps-num">03</span>${t('print.education')}</h2>
+          <div class="ps-edu-grid">
+            ${eduItems.map(e => `
+              <div class="ps-edu">
+                <div class="ps-edu-year">${e.year}</div>
+                <div class="ps-edu-title">${e.title}</div>
+                <div class="ps-edu-school">${e.school}</div>
+                <div class="ps-edu-status">${e.status}</div>
+              </div>
+            `).join('')}
+          </div>
+        </section>
+      </main>
+
+      <footer class="ps-foot">
+        <span>Mick van der Velden · ${t('print.role')}</span>
+        <span>mvelden6@gmail.com</span>
+      </footer>
+    `;
+  }
+
   const dlBtn = document.getElementById('downloadBtn');
-  if (dlBtn) dlBtn.addEventListener('click', () => window.print());
+  if (dlBtn) dlBtn.addEventListener('click', () => {
+    renderPrintSheet();
+    const prevTitle = document.title;
+    document.title = 'Mick van der Velden — CV';
+    window.print();
+    setTimeout(() => { document.title = prevTitle; }, 500);
+  });
 
   // ========================================================
   // ACTIVE NAV
