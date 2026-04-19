@@ -19,7 +19,6 @@
 
       'hero.status': 'Beschikbaar voor nieuwe kansen',
       'hero.role': 'Software Developer',
-      'hero.apis': 'API-integraties',
       'hero.location': '📍 Nederland',
       'hero.cta.email': 'Stuur mij een bericht',
 
@@ -109,7 +108,6 @@
       'term.cat':    '$ <span class="cmd">cat status.txt</span>',
       'term.status': '"Beschikbaar voor nieuwe kansen — laten we praten."',
 
-      'marquee.apis': 'API-integraties',
       'marquee.running': 'Hardlopen',
       'marquee.curious': 'Leergierig',
 
@@ -123,8 +121,10 @@
       'print.lang.nl': 'Nederlands',
       'print.lang.en': 'Engels',
       'print.summary':
-        'Software developer met ervaring in Java-backends, React-frontends en ' +
-        'API-integraties. Bouwt koppelingen tussen systemen met REST, GraphQL en data-formaten ' +
+        'Software developer gespecialiseerd in Java-backends en React-frontends,' +
+        'met focus op het bouwen van robuuste API-integraties tussen complexe systemen.' +
+        'Gericht op schaalbare en betrouwbare oplossingen in data-intensieve omgevingen.' +
+        'Bouwt koppelingen tussen systemen met REST, GraphQL en data-formaten ' +
         'als JSON, XML, EDIFACT en X12. Pragmatisch, gedreven en gericht op betrouwbare oplossingen.',
       'form.sending': 'Versturen…',
     },
@@ -264,7 +264,7 @@
         { name: 'Backend',            tags: ['Java', 'REST', 'SQL'] },
         { name: 'Frontend',           tags: ['React', 'TypeScript', 'HTML', 'CSS'] },
         { name: 'Data & Integratie',  tags: ['GraphQL', 'JSON', 'XML', 'EDIFACT', 'X12'] },
-        { name: 'Tools',              tags: ['Git', 'Postman', 'Jira', 'Agile / Scrum'] },
+        { name: 'Tools',              tags: ['Git', 'Postman', 'Azure', 'Jira', 'Scrum'] },
       ],
       xp: [
         {
@@ -272,12 +272,12 @@
           company: 'Deutsche Telekom Healthcare Solutions',
           date: 'Nov 2024 — heden',
           body: `
-            <p>Frontend developer in een cross-functioneel team dat een healthcare-kritieke applicatie
-            bouwt voor pathologielabs.</p>
+            <p>Frontend developer voor een healthcare-kritische applicatie voor pathologielabs,
+            met focus op React en GraphQL-integraties.</p>
             <ul>
-              <li>Ontwikkel <strong>React-componenten</strong> en pagina&rsquo;s met focus op bruikbaarheid.</li>
-              <li>Integreer backenddata via <strong>GraphQL</strong>-queries en schema-werk.</li>
-              <li>Lever features op in korte iteraties binnen een Agile/Scrum-team.</li>
+              <li>Ontwikkellen van <strong>React-componenten</strong> en pagina&rsquo;s met focus op bruikbaarheid.</li>
+              <li>Integreer backenddata via <strong>GraphQL</strong>-queries.</li>
+              <li>Lever features op in sprints binnen een Scrum-team.</li>
             </ul>`,
           tags: ['React', 'GraphQL', 'Frontend', 'Healthcare'],
         },
@@ -287,9 +287,9 @@
           date: 'Mrt 2022 — Jul 2024',
           body: `
             <p>Ontwierp, bouwde en onderhield Java-integraties tussen partnersystemen in een
-            B2B-omgeving.</p>
+            B2B-omgevingen.</p>
             <ul>
-              <li>Bouwde API-koppelingen tussen klantsystemen met Java.</li>
+              <li>Bouwde API-koppelingen tussen klantsystemen met <strong>Java</strong>.</li>
               <li>Implementeerde parsers en mappings voor <strong>JSON, XML, X12 en EDIFACT</strong>.</li>
               <li>Loste productiestoringen op in datastromen, in directe samenwerking met klanten.</li>
             </ul>`,
@@ -353,7 +353,7 @@
         { name: 'Backend',             tags: ['Java', 'REST', 'SQL'] },
         { name: 'Frontend',            tags: ['React', 'TypeScript', 'HTML', 'CSS'] },
         { name: 'Data & Integration',  tags: ['GraphQL', 'JSON', 'XML', 'EDIFACT', 'X12'] },
-        { name: 'Tools',               tags: ['Git', 'Postman', 'Jira', 'Agile / Scrum'] },
+        { name: 'Tools',               tags: ['Git', 'Postman', 'Azure', 'Jira', 'Scrum'] },
       ],
       xp: [
         {
@@ -361,12 +361,12 @@
           company: 'Deutsche Telekom Healthcare Solutions',
           date: 'Nov 2024 — present',
           body: `
-            <p>Frontend developer in a cross-functional team building a healthcare-critical
-            application for pathology labs.</p>
+            <p>Frontend developer building a healthcare-critical application for pathology labs,
+            with a focus on React and GraphQL integration.</p>
             <ul>
               <li>Build <strong>React components</strong> and pages with a focus on usability.</li>
               <li>Integrate backend data through <strong>GraphQL</strong> queries and schema work.</li>
-              <li>Ship features in short iterations within an Agile/Scrum team.</li>
+              <li>Ship features in short iterations within an Scrum team.</li>
             </ul>`,
           tags: ['React', 'GraphQL', 'Frontend', 'Healthcare'],
         },
@@ -376,7 +376,7 @@
           date: 'Mar 2022 — Jul 2024',
           body: `
             <p>Designed, built and maintained Java integrations between partner systems in a
-            B2B environment.</p>
+            B2B environments.</p>
             <ul>
               <li>Built API couplings between customer systems using Java.</li>
               <li>Implemented parsers and mappings for <strong>JSON, XML, X12 and EDIFACT</strong>.</li>
@@ -880,11 +880,11 @@
           <h2 class="ps-h">${t('print.contact')}</h2>
           <ul class="ps-contact-list">
             <li>${ic.pin}<span>Houtveldweg 800, 1507 ES Zaandam, NL</span></li>
-            <li>${ic.tel}<span>+31 6 1627 0753</span></li>
-            <li>${ic.mail}<span>mvelden6@gmail.com</span></li>
-            <li>${ic.link}<span>linkedin.com/in/mick-van-der-velden</span></li>
-            <li>${ic.gh}<span>github.com/MVelden1</span></li>
-            <li>${ic.web}<span>mvelden1.github.io</span></li>
+            <li><a href="tel:+31612270753">${ic.tel}<span>+31 6 1627 0753</span></a></li>
+            <li><a href="mailto:mvelden6@gmail.com">${ic.mail}<span>mvelden6@gmail.com</span></a></li>
+            <li><a href="https://linkedin.com/in/mick-van-der-velden">${ic.link}<span>linkedin.com/in/mick-van-der-velden</span></a></li>
+            <li><a href="https://github.com/MVelden1">${ic.gh}<span>github.com/MVelden1</span></a></li>
+            <li><a href="https://mvelden1.github.io">${ic.web}<span>mvelden1.github.io</span></a></li>
           </ul>
         </section>
 

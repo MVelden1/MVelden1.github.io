@@ -1437,6 +1437,13 @@ footer {
     flex-shrink: 0;
     color: var(--ps-accent);
   }
+  .ps-contact-list a {
+    display: flex;
+    align-items: center;
+    gap: 2.2mm;
+    color: var(--ps-ink-soft);
+    text-decoration: none;
+  }
 
   /* ============ SIDEBAR ============ */
   .ps-side {
