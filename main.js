@@ -120,10 +120,10 @@
       'print.education': 'Opleiding',
       'print.contact': 'Contact',
       'print.languages': 'Talen',
-      'print.lang.nl': 'Nederlands — moedertaal',
-      'print.lang.en': 'Engels — professioneel',
+      'print.lang.nl': 'Nederlands',
+      'print.lang.en': 'Engels',
       'print.summary':
-        'Software developer met ervaring in Java/Spring-backends, React-frontends en ' +
+        'Software developer met ervaring in Java-backends, React-frontends en ' +
         'API-integraties. Bouwt koppelingen tussen systemen met REST, GraphQL en data-formaten ' +
         'als JSON, XML, EDIFACT en X12. Pragmatisch, gedreven en gericht op betrouwbare oplossingen.',
       'form.sending': 'Versturen…',
@@ -241,10 +241,10 @@
       'print.education': 'Education',
       'print.contact': 'Contact',
       'print.languages': 'Languages',
-      'print.lang.nl': 'Dutch — native',
-      'print.lang.en': 'English — professional',
+      'print.lang.nl': 'Dutch',
+      'print.lang.en': 'English',
       'print.summary':
-        'Software developer with experience in Java/Spring backends, React frontends and ' +
+        'Software developer with experience in Java backends, React frontends and ' +
         'API integrations. Builds couplings between systems using REST, GraphQL and data formats ' +
         'like JSON, XML, EDIFACT and X12. Pragmatic, driven and focused on reliable solutions.',
       'form.sending': 'Sending…',
@@ -261,7 +261,7 @@
   const DATA = {
     nl: {
       skills: [
-        { name: 'Backend',            tags: ['Java', 'Spring', 'REST', 'SQL'] },
+        { name: 'Backend',            tags: ['Java', 'REST', 'SQL'] },
         { name: 'Frontend',           tags: ['React', 'TypeScript', 'HTML', 'CSS'] },
         { name: 'Data & Integratie',  tags: ['GraphQL', 'JSON', 'XML', 'EDIFACT', 'X12'] },
         { name: 'Tools',              tags: ['Git', 'Postman', 'Jira', 'Agile / Scrum'] },
@@ -289,7 +289,7 @@
             <p>Ontwierp, bouwde en onderhield Java-integraties tussen partnersystemen in een
             B2B-omgeving.</p>
             <ul>
-              <li>Bouwde API-koppelingen tussen klantsystemen met Java en Spring.</li>
+              <li>Bouwde API-koppelingen tussen klantsystemen met Java.</li>
               <li>Implementeerde parsers en mappings voor <strong>JSON, XML, X12 en EDIFACT</strong>.</li>
               <li>Loste productiestoringen op in datastromen, in directe samenwerking met klanten.</li>
             </ul>`,
@@ -350,7 +350,7 @@
     },
     en: {
       skills: [
-        { name: 'Backend',             tags: ['Java', 'Spring', 'REST', 'SQL'] },
+        { name: 'Backend',             tags: ['Java', 'REST', 'SQL'] },
         { name: 'Frontend',            tags: ['React', 'TypeScript', 'HTML', 'CSS'] },
         { name: 'Data & Integration',  tags: ['GraphQL', 'JSON', 'XML', 'EDIFACT', 'X12'] },
         { name: 'Tools',               tags: ['Git', 'Postman', 'Jira', 'Agile / Scrum'] },
@@ -378,7 +378,7 @@
             <p>Designed, built and maintained Java integrations between partner systems in a
             B2B environment.</p>
             <ul>
-              <li>Built API couplings between customer systems using Java and Spring.</li>
+              <li>Built API couplings between customer systems using Java.</li>
               <li>Implemented parsers and mappings for <strong>JSON, XML, X12 and EDIFACT</strong>.</li>
               <li>Resolved production data-flow issues in direct collaboration with customers.</li>
             </ul>`,
@@ -833,6 +833,7 @@
       link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>',
       gh: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.3v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>',
       web: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>',
+      tel: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>',
     };
 
     const eduItems = [
@@ -851,7 +852,6 @@
           <h1 class="ps-name">Mick van der Velden</h1>
           <p class="ps-role">${t('print.role')}</p>
           <div class="ps-rule"></div>
-          <p class="ps-tagline">${t('print.summary')}</p>
         </div>
       </header>
 
@@ -859,7 +859,8 @@
         <section class="ps-block">
           <h2 class="ps-h">${t('print.contact')}</h2>
           <ul class="ps-contact-list">
-            <li>${ic.pin}<span>Zaandam, NL</span></li>
+            <li>${ic.pin}<span>Houtveldweg 800, 1507 ES Zaandam, NL</span></li>
+            <li>${ic.tel}<span>+31 6 1627 0753</span></li>
             <li>${ic.mail}<span>mvelden6@gmail.com</span></li>
             <li>${ic.link}<span>linkedin.com/in/mick-van-der-velden</span></li>
             <li>${ic.gh}<span>github.com/MVelden1</span></li>
