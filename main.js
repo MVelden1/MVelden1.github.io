@@ -442,12 +442,18 @@
   // ========================================================
   // THEME + AESTHETIC
   // ========================================================
-  const state = Object.assign({}, TWEAK_DEFAULTS, {
-    ...(() => {
-      try { return JSON.parse(localStorage.getItem('cv_state') || '{}'); }
-      catch { return {}; }
-    })()
-  });
+  const persistedState = (() => {
+    try { return JSON.parse(localStorage.getItem('cv_state') || '{}'); }
+    catch { return {}; }
+  })();
+  const hasStoredTheme = persistedState.theme === 'light' || persistedState.theme === 'dark';
+  let userHasChosenTheme = hasStoredTheme;
+  const prefersDarkScheme = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+  const state = Object.assign({}, TWEAK_DEFAULTS, persistedState);
+  if (!hasStoredTheme && prefersDarkScheme) {
+    state.theme = prefersDarkScheme.matches ? 'dark' : 'light';
+  }
 
   function applyState() {
     root.setAttribute('data-theme', state.theme);
@@ -480,7 +486,21 @@
 
   applyState();
 
+  if (prefersDarkScheme) {
+    const onSystemThemeChange = (e) => {
+      if (userHasChosenTheme) return;
+      state.theme = e.matches ? 'dark' : 'light';
+      applyState();
+    };
+    if (typeof prefersDarkScheme.addEventListener === 'function') {
+      prefersDarkScheme.addEventListener('change', onSystemThemeChange);
+    } else if (typeof prefersDarkScheme.addListener === 'function') {
+      prefersDarkScheme.addListener(onSystemThemeChange);
+    }
+  }
+
   document.getElementById('themeBtn').addEventListener('click', () => {
+    userHasChosenTheme = true;
     state.theme = state.theme === 'dark' ? 'light' : 'dark';
     applyState(); saveState();
   });
@@ -969,6 +989,7 @@
   function bindSeg(id, key) {
     document.querySelectorAll(`#${id} button`).forEach(b => {
       b.addEventListener('click', () => {
+        if (key === 'theme') userHasChosenTheme = true;
         state[key] = b.dataset.v;
         applyState(); saveState();
         try {
