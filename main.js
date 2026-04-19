@@ -121,8 +121,8 @@
       'print.lang.en': 'Engels',
       'print.summary':
         'Software developer gespecialiseerd in Java en React, ' +
-        'met focus op het bouwen van robuuste API-integraties tussen complexe systemen.' +
-        'Gericht op schaalbare en betrouwbare oplossingen in data-intensieve omgevingen.' +
+        'met focus op het bouwen van robuuste API-integraties tussen complexe systemen. ' +
+        'Gericht op schaalbare en betrouwbare oplossingen in data-intensieve omgevingen. ' +
         'Bouwt koppelingen tussen systemen met REST, GraphQL en data-formaten ' +
         'als JSON, XML, EDIFACT en X12. Pragmatisch, gedreven en gericht op betrouwbare oplossingen.',
       'form.sending': 'Versturen…',
@@ -285,7 +285,7 @@
           company: 'Copernicus Interchange Technology',
           date: 'Mrt 2022 — Jul 2024',
           body: `
-            <p>Ontwierp, bouwde en onderhield Java-integraties tussen partnersystemen in een
+            <p>Ontwierp, bouwde en onderhield Java-integraties tussen partnersystemen in
             B2B-omgevingen.</p>
             <ul>
               <li>Bouwde API-koppelingen tussen klantsystemen met <strong>Java</strong>.</li>
@@ -374,7 +374,7 @@
           company: 'Copernicus Interchange Technology',
           date: 'Mar 2022 — Jul 2024',
           body: `
-            <p>Designed, built and maintained Java integrations between partner systems in a
+            <p>Designed, built and maintained Java integrations between partner systems in
             B2B environments.</p>
             <ul>
               <li>Built API couplings between customer systems using Java.</li>
