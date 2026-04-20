@@ -268,7 +268,7 @@
           company: 'Deutsche Telekom Healthcare Solutions',
           date: 'Nov 2024 — heden',
           body: `
-            <p>Frontend developer voor een healthcare-kritische applicatie voor pathologielabs,
+            <p>Frontend developer werkend aan een healthcare applicatie gericht op pathologielabs,
             met focus op React en GraphQL-integraties.</p>
             <ul>
               <li>Ontwikkelen van <strong>React-componenten</strong> en pagina&rsquo;s met focus op bruikbaarheid.</li>
