@@ -26,9 +26,9 @@
       'about.title': 'Wie ik ben, in <em>één adem</em>.',
       'about.body':
         'Software developer gespecialiseerd in <strong>Java</strong> en <strong>React</strong>, ' +
-        'met focus op het bouwen van robuuste <span class="mark">API-integraties</span> tussen complexe systemen. ' +
-        'Werkt met REST, GraphQL en data-formaten als JSON, XML, EDIFACT en X12. Pragmatisch, gedreven ' +
-        'en gericht op <em>schaalbare en betrouwbare oplossingen</em>.',
+        'met ervaring in het bouwen van <span class="mark">API-integraties</span> tussen B2B-systemen. ' +
+        'Heeft gewerkt aan front-end, koppelingen tussen systemen en dataformaten als JSON, XML, EDIFACT en X12. ' +
+        '<em>Gedreven, doelgericht en probleemoplossend</em>.',
       'about.stat.years': 'jaar ervaring',
       'about.stat.companies': 'bedrijven',
       'about.stat.tech': 'technologieën',
@@ -121,10 +121,9 @@
       'print.lang.en': 'Engels',
       'print.summary':
         'Software developer gespecialiseerd in Java en React, ' +
-        'met focus op het bouwen van robuuste API-integraties tussen complexe systemen. ' +
-        'Gericht op schaalbare en betrouwbare oplossingen in data-intensieve omgevingen. ' +
-        'Bouwt koppelingen tussen systemen met REST, GraphQL en data-formaten ' +
-        'als JSON, XML, EDIFACT en X12. Pragmatisch, gedreven en gericht op betrouwbare oplossingen.',
+        'met ervaring in het bouwen van API-integraties tussen B2B-systemen. ' +
+        'Heeft gewerkt aan front-end, koppelingen tussen systemen en dataformaten ' +
+        'als JSON, XML, EDIFACT en X12. Gedreven, doelgericht en probleemoplossend.',
       'form.sending': 'Versturen…',
     },
 
@@ -146,9 +145,9 @@
       'about.title': 'Who I am, in <em>one breath</em>.',
       'about.body':
         'Software developer specialised in <strong>Java</strong> and <strong>React</strong>, ' +
-        'focused on building robust <span class="mark">API integrations</span> between complex systems. ' +
-        'Works with REST, GraphQL and data formats like JSON, XML, EDIFACT and X12. Pragmatic, driven ' +
-        'and focused on <em>scalable and reliable solutions</em>.',
+        'with experience building <span class="mark">API integrations</span> between B2B systems. ' +
+        'Has worked on front-end, system connections and data formats like JSON, XML, EDIFACT and X12. ' +
+        '<em>Driven, goal-oriented and solution-focused</em>.',
       'about.stat.years': 'years of experience',
       'about.stat.companies': 'companies',
       'about.stat.tech': 'technologies',
@@ -240,10 +239,10 @@
       'print.lang.nl': 'Dutch',
       'print.lang.en': 'English',
       'print.summary':
-        'Software developer specialised in Java and React, focused on building robust API integrations between complex systems. ' +
-        'Aimed at scalable and reliable solutions in data-intensive environments. ' +
-        'Builds connections between systems using REST, GraphQL and data formats like JSON, XML, EDIFACT and X12. ' +
-        'Pragmatic, driven and focused on reliable solutions.',
+        'Software developer specialised in Java and React, ' +
+        'with experience building API integrations between B2B systems. ' +
+        'Has worked on front-end, system connections and data formats ' +
+        'like JSON, XML, EDIFACT and X12. Driven, goal-oriented and solution-focused.',
       'form.sending': 'Sending…',
     },
   };
@@ -283,12 +282,12 @@
           company: 'Copernicus Interchange Technology',
           date: 'Mrt 2022 — Jul 2024',
           body: `
-            <p>Ontwierp, bouwde en onderhield Java-integraties tussen partnersystemen in
+            <p>Ontwerpen, bouwen en onderhouden van Java-integraties tussen partnersystemen in
             B2B-omgevingen.</p>
             <ul>
-              <li>Bouwde API-koppelingen tussen klantsystemen met <strong>Java</strong>.</li>
-              <li>Implementeerde parsers en mappings voor <strong>JSON, XML, X12 en EDIFACT</strong>.</li>
-              <li>Loste productiestoringen op in datastromen, in directe samenwerking met klanten.</li>
+              <li>Bouwen van API-koppelingen tussen klantsystemen met <strong>Java</strong>.</li>
+              <li>Implementeren van parsers en mappings voor <strong>JSON, XML, X12 en EDIFACT</strong>.</li>
+              <li>Het oplossen van productiestoringen in datastromen, in directe samenwerking met klanten.</li>
             </ul>`,
           tags: ['Java', 'JSON', 'XML', 'EDIFACT', 'API-integratie'],
         },
@@ -372,12 +371,12 @@
           company: 'Copernicus Interchange Technology',
           date: 'Mar 2022 — Jul 2024',
           body: `
-            <p>Designed, built and maintained Java integrations between partner systems in
+            <p>Designing, building and maintaining Java integrations between partner systems in
             B2B environments.</p>
             <ul>
-              <li>Built API couplings between customer systems using Java.</li>
-              <li>Implemented parsers and mappings for <strong>JSON, XML, X12 and EDIFACT</strong>.</li>
-              <li>Resolved production data-flow issues in direct collaboration with customers.</li>
+              <li>Building API couplings between customer systems with <strong>Java</strong>.</li>
+              <li>Implementing parsers and mappings for <strong>JSON, XML, X12 and EDIFACT</strong>.</li>
+              <li>Resolving production data-flow issues in direct collaboration with customers.</li>
             </ul>`,
           tags: ['Java', 'JSON', 'XML', 'EDIFACT', 'API integration'],
         },
