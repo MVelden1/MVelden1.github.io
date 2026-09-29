@@ -374,7 +374,7 @@
             <p>Designing, building and maintaining Java integrations between partner systems in
             B2B environments.</p>
             <ul>
-              <li>Building API couplings between customer systems with <strong>Java</strong>.</li>
+              <li>Building API integrations between customer systems with <strong>Java</strong>.</li>
               <li>Implementing parsers and mappings for <strong>JSON, XML, X12 and EDIFACT</strong>.</li>
               <li>Resolving production data-flow issues in direct collaboration with customers.</li>
             </ul>`,
