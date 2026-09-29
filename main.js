@@ -55,7 +55,7 @@
 
       'edu.eyebrow': '05 — Opleiding',
       'edu.title': 'Waar ik het <em>geleerd</em> heb.',
-      'edu.now.year': '2021 — heden',
+      'edu.now.year': '2021 - heden',
       'edu.now.title': 'Software Development',
       'edu.pe.title': 'Lichamelijke opvoeding',
       'edu.ta.title': 'Onderwijsassistent',
@@ -120,10 +120,10 @@
       'print.lang.nl': 'Nederlands',
       'print.lang.en': 'Engels',
       'print.summary':
-        'Software developer gespecialiseerd in Java en React, ' +
-        'met ervaring in het bouwen van API-integraties tussen B2B-systemen. ' +
-        'Heeft gewerkt aan front-end, koppelingen tussen systemen en dataformaten ' +
-        'als JSON, XML, EDIFACT en X12. Gedreven, doelgericht en probleemoplossend.',
+        'Software developer met ervaring in Java en React. ' +
+        'Ik heb API-integraties tussen B2B-systemen gebouwd, met dataformaten als ' +
+        'JSON, XML, EDIFACT en X12, en werk nu aan de frontend van een zorgapplicatie. ' +
+        'Mijn focus ligt op backend en integraties in Java.',
       'form.sending': 'Versturen…',
     },
 
@@ -174,7 +174,7 @@
 
       'edu.eyebrow': '05 — Education',
       'edu.title': 'How I <em>got here</em>.',
-      'edu.now.year': '2021 — present',
+      'edu.now.year': '2021 - present',
       'edu.now.title': 'Software Development',
       'edu.pe.title': 'Physical Education',
       'edu.ta.title': 'Teaching Assistant',
@@ -239,10 +239,10 @@
       'print.lang.nl': 'Dutch',
       'print.lang.en': 'English',
       'print.summary':
-        'Software developer specialised in Java and React, ' +
-        'with experience building API integrations between B2B systems. ' +
-        'Has worked on front-end, system connections and data formats ' +
-        'like JSON, XML, EDIFACT and X12. Driven, goal-oriented and solution-focused.',
+        'Software developer with experience in Java and React. ' +
+        'I have built API integrations between B2B systems, working with data formats like ' +
+        'JSON, XML, EDIFACT and X12, and currently work on the frontend of a healthcare application. ' +
+        'My focus is on backend development and integrations in Java.',
       'form.sending': 'Sending…',
     },
   };
@@ -257,37 +257,37 @@
   const DATA = {
     nl: {
       skills: [
-        { name: 'Backend',            tags: ['Java', 'REST', 'SQL'] },
+        { name: 'Backend',            tags: ['Java', 'REST', 'SQL Server'] },
         { name: 'Frontend',           tags: ['React', 'TypeScript', 'HTML', 'CSS'] },
         { name: 'Data & Integratie',  tags: ['GraphQL', 'JSON', 'XML', 'EDIFACT', 'X12'] },
-        { name: 'Tools',              tags: ['Git', 'Postman', 'Azure', 'Jira', 'Scrum'] },
+        { name: 'Tools',              tags: ['Git', 'GitHub', 'Postman', 'Azure', 'Jira', 'Scrum'] },
       ],
       xp: [
         {
           role: 'Software Developer',
           company: 'Deutsche Telekom Healthcare Solutions',
-          date: 'Nov 2024 — heden',
+          date: 'Nov 2024 - heden',
           body: `
-            <p>Frontend developer werkend aan een healthcare applicatie gericht op pathologielabs,
+            <p>Frontend developer in een team dat een zorgapplicatie voor pathologielabs bouwt,
             met focus op React en GraphQL-integraties.</p>
             <ul>
               <li>Ontwikkelen van <strong>React-componenten</strong> en pagina&rsquo;s met focus op bruikbaarheid.</li>
-              <li>Integreer backenddata via <strong>GraphQL</strong>-queries.</li>
-              <li>Lever features op in sprints binnen een Scrum-team.</li>
+              <li>Integreren van backenddata via <strong>GraphQL</strong>-queries.</li>
+              <li>Opleveren van features in sprints binnen een Scrum-team.</li>
             </ul>`,
           tags: ['React', 'GraphQL', 'Frontend', 'Healthcare'],
         },
         {
-          role: 'Integratie Specialist',
+          role: 'Integratie Specialist · Java',
           company: 'Copernicus Interchange Technology',
-          date: 'Mrt 2022 — Jul 2024',
+          date: 'Mrt 2022 - Jul 2024',
           body: `
             <p>Ontwerpen, bouwen en onderhouden van Java-integraties tussen partnersystemen in
             B2B-omgevingen.</p>
             <ul>
               <li>Bouwen van API-koppelingen tussen klantsystemen met <strong>Java</strong>.</li>
               <li>Implementeren van parsers en mappings voor <strong>JSON, XML, X12 en EDIFACT</strong>.</li>
-              <li>Het oplossen van productiestoringen in datastromen, in directe samenwerking met klanten.</li>
+              <li>Oplossen van productiestoringen in datastromen, in directe samenwerking met klanten.</li>
             </ul>`,
           tags: ['Java', 'JSON', 'XML', 'EDIFACT', 'API-integratie'],
         },
@@ -346,30 +346,30 @@
     },
     en: {
       skills: [
-        { name: 'Backend',             tags: ['Java', 'REST', 'SQL'] },
+        { name: 'Backend',             tags: ['Java', 'REST', 'SQL Server'] },
         { name: 'Frontend',            tags: ['React', 'TypeScript', 'HTML', 'CSS'] },
         { name: 'Data & Integration',  tags: ['GraphQL', 'JSON', 'XML', 'EDIFACT', 'X12'] },
-        { name: 'Tools',               tags: ['Git', 'Postman', 'Azure', 'Jira', 'Scrum'] },
+        { name: 'Tools',               tags: ['Git', 'GitHub', 'Postman', 'Azure', 'Jira', 'Scrum'] },
       ],
       xp: [
         {
           role: 'Software Developer',
           company: 'Deutsche Telekom Healthcare Solutions',
-          date: 'Nov 2024 — present',
+          date: 'Nov 2024 - present',
           body: `
-            <p>Frontend developer building a healthcare-critical application for pathology labs,
+            <p>Frontend developer in a team building a healthcare application for pathology labs,
             with a focus on React and GraphQL integration.</p>
             <ul>
-              <li>Build <strong>React components</strong> and pages with a focus on usability.</li>
-              <li>Integrate backend data through <strong>GraphQL</strong> queries and schema work.</li>
-              <li>Ship features in short iterations within a Scrum team.</li>
+              <li>Building <strong>React components</strong> and pages with a focus on usability.</li>
+              <li>Integrating backend data through <strong>GraphQL</strong> queries and schema work.</li>
+              <li>Delivering features in sprints within a Scrum team.</li>
             </ul>`,
           tags: ['React', 'GraphQL', 'Frontend', 'Healthcare'],
         },
         {
-          role: 'Integration Specialist',
+          role: 'Integration Specialist · Java',
           company: 'Copernicus Interchange Technology',
-          date: 'Mar 2022 — Jul 2024',
+          date: 'Mar 2022 - Jul 2024',
           body: `
             <p>Designing, building and maintaining Java integrations between partner systems in
             B2B environments.</p>
@@ -868,9 +868,9 @@
     };
 
     const eduItems = [
-      { year: '2021 — ' + eduNow, title: t('edu.now.title'), school: 'Novi Hogeschool, Utrecht', status: t('edu.status.live') },
-      { year: '2017 — 2019', title: t('edu.pe.title'), school: 'Hogeschool van Amsterdam', status: t('edu.status.prop') },
-      { year: '2013 — 2017', title: t('edu.ta.title'), school: 'Horizon College, Alkmaar', status: t('edu.status.done') },
+      { year: '2021 - ' + eduNow, title: t('edu.now.title'), school: 'Novi Hogeschool, Utrecht', status: t('edu.status.live') },
+      { year: '2017 - 2019', title: t('edu.pe.title'), school: 'Hogeschool van Amsterdam', status: t('edu.status.prop') },
+      { year: '2013 - 2017', title: t('edu.ta.title'), school: 'Horizon College, Alkmaar', status: t('edu.status.done') },
     ];
 
     printSheet.innerHTML = `
@@ -879,10 +879,8 @@
           <img src="assets/mick.png" alt="Portret van Mick van der Velden" />
         </div>
         <div class="ps-id">
-          <div class="ps-eyebrow">Curriculum Vitae</div>
           <h1 class="ps-name">Mick van der Velden</h1>
           <p class="ps-role">${t('print.role')}</p>
-          <div class="ps-rule"></div>
         </div>
       </header>
 
@@ -891,7 +889,7 @@
           <h2 class="ps-h">${t('print.contact')}</h2>
           <ul class="ps-contact-list">
             <li>${ic.pin}<span>Houtveldweg 800, 1507 ES Zaandam, NL</span></li>
-            <li><a href="tel:+31612270753">${ic.tel}<span>+31 6 1627 0753</span></a></li>
+            <li><a href="tel:+31616270753">${ic.tel}<span>+31 6 1627 0753</span></a></li>
             <li><a href="mailto:mvelden6@gmail.com">${ic.mail}<span>mvelden6@gmail.com</span></a></li>
             <li><a href="https://linkedin.com/in/mick-van-der-velden">${ic.link}<span>linkedin.com/in/mick-van-der-velden</span></a></li>
             <li><a href="https://github.com/MVelden1">${ic.gh}<span>github.com/MVelden1</span></a></li>
@@ -917,12 +915,12 @@
 
       <main class="ps-main">
         <section class="ps-block">
-          <h2 class="ps-h ps-h-main"><span class="ps-num">01</span>${t('print.profile')}</h2>
+          <h2 class="ps-h ps-h-main">${t('print.profile')}</h2>
           <p class="ps-p">${t('print.summary')}</p>
         </section>
 
         <section class="ps-block">
-          <h2 class="ps-h ps-h-main"><span class="ps-num">02</span>${t('print.experience')}</h2>
+          <h2 class="ps-h ps-h-main">${t('print.experience')}</h2>
           ${xps.map(x => `
             <article class="ps-xp">
               <header>
@@ -933,13 +931,12 @@
                 <div class="ps-xp-date">${x.date}</div>
               </header>
               <div class="ps-xp-body">${x.body}</div>
-              <div class="ps-xp-tags">${x.tags.map(tg => `<span>${tg}</span>`).join('')}</div>
             </article>
           `).join('')}
         </section>
 
         <section class="ps-block">
-          <h2 class="ps-h ps-h-main"><span class="ps-num">03</span>${t('print.education')}</h2>
+          <h2 class="ps-h ps-h-main">${t('print.education')}</h2>
           <div class="ps-edu-grid">
             ${eduItems.map(e => `
               <div class="ps-edu">
@@ -964,7 +961,7 @@
   if (dlBtn) dlBtn.addEventListener('click', () => {
     renderPrintSheet();
     const prevTitle = document.title;
-    document.title = 'Mick van der Velden — CV';
+    document.title = 'Mick van der Velden - CV';
     window.print();
     setTimeout(() => { document.title = prevTitle; }, 500);
   });
