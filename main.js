@@ -876,7 +876,7 @@
     printSheet.innerHTML = `
       <header class="ps-head">
         <div class="ps-photo">
-          <img src="assets/mick.png" alt="Portret van Mick van der Velden" />
+          <img src="assets/mick.jpg" alt="Portret van Mick van der Velden" />
         </div>
         <div class="ps-id">
           <h1 class="ps-name">Mick van der Velden</h1>
