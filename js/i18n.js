@@ -15,7 +15,6 @@ const EN = {
 
   'nav.profile': 'Profile',
   'nav.experience': 'Experience',
-  'nav.projects': 'Projects',
   'nav.skills': 'Skills',
   'nav.education': 'Education',
   'nav.contact': 'Contact',
@@ -53,15 +52,11 @@ const EN = {
         </ul>`,
   'xp.cp.tag': 'API integration',
 
-  'pj.cadns': 'Training log app built with Java and Spring Boot.',
-  'pj.novi.title': 'Novi final project',
-  'pj.novi': 'Spring Boot platform for a running club, built as the final project of the Software Development programme at Novi.',
-  'pj.sportstats': 'Command-line tool in Python that works with the Strava API.',
-
   'skills.data': 'Data and integration',
 
   'edu.now.year': '2021 - present',
   'edu.status.live': 'In progress',
+  'edu.note': 'Final assignment Programming Fundamentals: SportStats CLI, a command-line tool in Python using the Strava API',
   'edu.pe.title': 'Physical Education',
   'edu.status.prop': '(propaedeutic diploma)',
   'edu.ta.title': 'Teaching Assistant',

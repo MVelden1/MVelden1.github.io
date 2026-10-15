@@ -46,8 +46,10 @@ function fillPrintSheet() {
       el('p', 'ps-edu-year', text($('.edu-year', item))),
       el('p', 'ps-edu-title', text($('.edu-title', item))),
       el('p', 'ps-edu-school', text($('.edu-school', item))),
-      el('p', 'ps-edu-status', text($('.edu-status', item)).replace(/[()]/g, '')),
     );
+    const note = $('.edu-note', item);
+    if (note) div.append(el('p', 'ps-edu-note', text(note)));
+    div.append(el('p', 'ps-edu-status', text($('.edu-status', item)).replace(/[()]/g, '')));
     return div;
   }));
 }
