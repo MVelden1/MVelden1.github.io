@@ -46,6 +46,9 @@ function initActiveNav() {
 }
 
 function initReveal() {
+  // Only hide .reveal content once we know this script can reveal it again.
+  if (!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
