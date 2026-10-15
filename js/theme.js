@@ -2,6 +2,8 @@
 // (stored choice, otherwise system preference) to avoid a flash on load.
 
 const STORAGE_KEY = 'cv_state';
+const FADE_MS = 300;
+let fadeTimer;
 
 function storedTheme() {
   try {
@@ -12,8 +14,14 @@ function storedTheme() {
   }
 }
 
+// Colours fade only while .theme-transition is set, so hover transitions
+// keep their own (shorter) timing the rest of the time.
 function setTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
+  const root = document.documentElement;
+  root.classList.add('theme-transition');
+  clearTimeout(fadeTimer);
+  fadeTimer = setTimeout(() => root.classList.remove('theme-transition'), FADE_MS + 50);
+  root.setAttribute('data-theme', theme);
 }
 
 export function initTheme() {
@@ -22,7 +30,7 @@ export function initTheme() {
   let userHasChosen = storedTheme() !== null;
 
   if (!root.hasAttribute('data-theme')) {
-    setTheme(storedTheme() ?? (media.matches ? 'dark' : 'light'));
+    root.setAttribute('data-theme', storedTheme() ?? (media.matches ? 'dark' : 'light'));
   }
 
   media.addEventListener('change', e => {

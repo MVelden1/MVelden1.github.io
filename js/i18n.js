@@ -91,7 +91,6 @@ const EN = {
 // Dutch strings that only exist at runtime (not in the HTML).
 const NL = {
   'a11y.menu.close': 'Menu sluiten',
-  'ct.copied': 'Gekopieerd',
   'form.sending': 'Versturen...',
 };
 

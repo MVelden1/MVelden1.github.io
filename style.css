@@ -69,7 +69,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--topbar-h) + 16px);
+  scroll-padding-top: var(--topbar-h);
 }
 
 body {
@@ -80,7 +80,6 @@ body {
   color: var(--ink);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
-  transition: background-color .3s ease, color .3s ease;
 }
 
 h1, h2, h3 {
@@ -174,7 +173,7 @@ a:hover { color: var(--accent-ink); }
   line-height: 1.2;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+  transition: background-color .15s ease-out, color .15s ease-out;
 }
 .btn svg { width: 16px; height: 16px; flex-shrink: 0; }
 .btn-sm { padding: 8px 12px; font-size: 12px; }
@@ -205,14 +204,31 @@ a:hover { color: var(--accent-ink); }
   border: 1px solid color-mix(in oklab, var(--rule) 18%, transparent);
   color: var(--ink);
   cursor: pointer;
-  transition: background-color .2s ease;
+  position: relative;
+  transition: background-color .15s ease-out, color .15s ease-out;
 }
 .icon-btn:hover { background: color-mix(in oklab, var(--ink) 6%, transparent); }
 .icon-btn svg { width: 18px; height: 18px; }
 
-.icon-moon { display: none; }
-:root[data-theme="dark"] .icon-sun { display: none; }
-:root[data-theme="dark"] .icon-moon { display: block; }
+.icon-btn .icon-sun,
+.icon-btn .icon-moon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  transition: opacity .15s ease-out;
+}
+.icon-moon { opacity: 0; }
+:root[data-theme="dark"] .icon-sun { opacity: 0; }
+:root[data-theme="dark"] .icon-moon { opacity: 1; }
+
+/* Copy button: label and "copied" state cross-fade in the same grid cell,
+   so the button never changes size. */
+.copy-btn { display: inline-grid; place-items: center; }
+.copy-btn > span { grid-area: 1 / 1; transition: opacity .15s ease-out; }
+.copy-done { display: inline-flex; align-items: center; gap: 6px; opacity: 0; }
+.copy-done svg { width: 14px; height: 14px; }
+.copy-btn.is-copied .copy-label { opacity: 0; }
+.copy-btn.is-copied .copy-done { opacity: 1; }
 
 /* =========================================================
    Top bar and navigation
@@ -230,7 +246,7 @@ a:hover { color: var(--accent-ink); }
 
 .topbar .inner {
   max-width: var(--maxw);
-  min-height: var(--topbar-h);
+  min-height: calc(var(--topbar-h) - 1px); /* + 1px border = --topbar-h */
   margin: 0 auto;
   padding: 0 var(--gutter);
   display: flex;
@@ -248,43 +264,108 @@ a:hover { color: var(--accent-ink); }
 }
 
 .nav {
-  display: flex;
-  gap: 2px;
   font-family: var(--ff-mono);
   font-size: 13px;
 }
+.nav-links {
+  position: relative;
+  display: flex;
+  gap: 2px;
+}
 .nav a {
+  position: relative;
+  z-index: 1;
   padding: 8px 12px;
   border-radius: 999px;
   color: var(--ink-soft);
   text-decoration: none;
-  transition: background-color .2s ease, color .2s ease;
+  transition: color .15s ease-out;
 }
-.nav a:hover { background: color-mix(in oklab, var(--ink) 6%, transparent); color: var(--ink); }
+/* Underline that grows from left to right on hover and keyboard focus */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 5px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .2s ease-out;
+}
+.nav a:hover, .nav a:focus-visible { color: var(--ink); }
+.nav a:hover::after, .nav a:focus-visible::after { transform: scaleX(1); }
 .nav a.active { color: var(--ink); background: color-mix(in oklab, var(--accent) 14%, transparent); }
+
+/* Pill behind the active link that slides between items. js/main.js adds it
+   and sets its position and width; without JS the .active background stays. */
+.nav-pill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--accent) 14%, transparent);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .25s ease-out, width .25s ease-out, opacity .25s ease-out;
+}
+.nav-pill.no-slide { transition: opacity .25s ease-out; }
+.nav-pill.is-visible { opacity: 1; }
+.nav-links.has-pill a.active { background: transparent; }
+.nav-links:not(.has-pill) .nav-pill { display: none; }
 
 .top-actions { display: flex; align-items: center; gap: 8px; }
 
 .menu-btn { display: none; }
+.menu-btn .bar {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform .2s ease-out, opacity .2s ease-out;
+}
+.menu-btn[aria-expanded="true"] .bar-1 { transform: translateY(5px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] .bar-2 { opacity: 0; }
+.menu-btn[aria-expanded="true"] .bar-3 { transform: translateY(-5px) rotate(-45deg); }
 
 @media (max-width: 959px) {
   .menu-btn { display: inline-flex; }
 
+  /* Collapsible panel: grid rows 0fr to 1fr plus opacity. visibility keeps
+     the closed links out of the tab order. */
   .nav {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    flex-direction: column;
-    gap: 0;
-    padding: 8px var(--gutter) 16px;
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    visibility: hidden;
     background: var(--bg);
     border-bottom: 1px solid color-mix(in oklab, var(--rule) 12%, transparent);
     font-size: 15px;
+    transition: grid-template-rows .2s ease-out, opacity .2s ease-out, visibility 0s linear .2s;
   }
-  .nav.open { display: flex; }
+  .nav.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+    transition: grid-template-rows .2s ease-out, opacity .2s ease-out, visibility 0s;
+  }
+  .nav-links {
+    min-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0 var(--gutter);
+  }
+  .nav-links > a:first-of-type { margin-top: 8px; }
+  .nav-links > a:last-of-type { margin-bottom: 16px; }
   .nav a { padding: 12px 8px; border-radius: var(--radius-sm); }
+  .nav a::after { left: 8px; right: 8px; bottom: 9px; }
 }
 
 /* =========================================================
@@ -292,6 +373,21 @@ a:hover { color: var(--accent-ink); }
    ========================================================= */
 
 .hero { padding-top: 48px; padding-bottom: 56px; }
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+.hero-text > * { animation: rise-in .35s ease-out both; }
+.hero-text > :nth-child(2) { animation-delay: 70ms; }
+.hero-text > :nth-child(3) { animation-delay: 140ms; }
+.hero-text > :nth-child(4) { animation-delay: 210ms; }
+.hero-text > :nth-child(5) { animation-delay: 280ms; }
+
+/* Images fade in once loaded. js/main.js only marks images that are not
+   loaded yet, so cached images never flash; width/height reserve the space. */
+main img { transition: opacity .25s ease-out; }
+main img.img-pending { opacity: 0; }
 
 .hero-grid {
   display: grid;
@@ -576,7 +672,7 @@ a:hover { color: var(--accent-ink); }
   font-family: var(--ff-mono);
   font-size: 14px;
   text-decoration: none;
-  transition: background-color .2s ease;
+  transition: background-color .15s ease-out;
 }
 .contact-link:hover { background: var(--bg-elev); color: var(--ink); }
 .contact-link svg { width: 18px; height: 18px; color: var(--accent); }
@@ -644,7 +740,19 @@ a:hover { color: var(--accent-ink); }
   color: var(--ink-muted);
 }
 .foot-links { display: flex; gap: 20px; margin: 0; padding: 0; list-style: none; }
-.foot-links a { color: var(--ink-soft); text-underline-offset: 3px; }
+.foot-links a { color: var(--ink-soft); }
+
+/* Underline that grows from left to right on hover and keyboard focus */
+.foot-links a,
+.contact-link .label {
+  text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-size .2s ease-out, color .15s ease-out;
+}
+.foot-links a:hover, .foot-links a:focus-visible,
+.contact-link:hover .label, .contact-link:focus-visible .label { background-size: 100% 1px; }
 
 /* =========================================================
    Reveal on scroll (only when JS runs)
@@ -657,9 +765,18 @@ a:hover { color: var(--accent-ink); }
 }
 .js .reveal.in { opacity: 1; transform: none; }
 
+/* Theme switch: colours fade for 300ms while js/theme.js sets
+   .theme-transition on <html>. More specific than the reduced-motion reset
+   below, so this colour fade is the one transition that stays there. */
+.theme-transition *:not(.icon-sun):not(.icon-moon),
+.theme-transition *::before,
+.theme-transition *::after {
+  transition: background-color .3s ease-out, color .3s ease-out, border-color .3s ease-out !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { animation-duration: 0s !important; transition: none !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
 

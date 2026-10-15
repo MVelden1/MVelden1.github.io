@@ -7,7 +7,9 @@ function initCopyButton() {
     btn?.setAttribute('hidden', '');
     return;
   }
-  const label = btn.querySelector('span');
+  // The visible label cross-fades via CSS (.is-copied); the status element
+  // announces the change to screen readers.
+  const status = document.getElementById('copyStatus');
   let timer;
   btn.addEventListener('click', async () => {
     try {
@@ -15,9 +17,13 @@ function initCopyButton() {
     } catch {
       return;
     }
-    label.textContent = t('ct.copied');
+    btn.classList.add('is-copied');
+    if (status) status.textContent = t('ct.copied');
     clearTimeout(timer);
-    timer = setTimeout(() => { label.textContent = t('ct.copy'); }, 1800);
+    timer = setTimeout(() => {
+      btn.classList.remove('is-copied');
+      if (status) status.textContent = '';
+    }, 1500);
   });
 }
 
