@@ -21,13 +21,11 @@
   <div class="inner">
     <a href="#top" class="brand">
       <span>MV</span>
-      <span class="dot"></span>
     </a>
     <nav class="nav" id="nav">
       <a href="#profiel" data-i18n="nav.profile">Profiel</a>
       <a href="#skills" data-i18n="nav.skills">Skills</a>
       <a href="#ervaring" data-i18n="nav.experience">Ervaring</a>
-      <a href="#playground" data-i18n="nav.playground">Playground</a>
       <a href="#opleiding" data-i18n="nav.education">Opleiding</a>
       <a href="#buiten" data-i18n="nav.beyond">Buiten</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -53,12 +51,12 @@
      Hero
      ========================================================== -->
 <section class="hero wrap" id="profiel">
-  <span class="status-pill"><span class="led"></span> <span data-i18n="hero.status">Beschikbaar voor nieuwe kansen</span></span>
+  <span class="status-pill"><span class="led" aria-hidden="true"></span> <span data-i18n="hero.status">Beschikbaar voor nieuwe kansen</span></span>
 
   <div class="hero-grid">
     <div>
       <h1 class="hero-name">
-        <span id="heroText"></span><span class="caret"></span>
+        Mick van der Velden
       </h1>
       <div class="hero-sub">
         <span class="chip" data-i18n="hero.role">Software Developer</span>
@@ -85,29 +83,13 @@
 
     <!-- right column: terminal + photo -->
     <div style="display: grid; gap: 24px;">
-      <div class="hero-terminal">
-        <span class="ttitle">~/mick — zsh</span>
-        <div class="tbody" id="terminal"></div>
-      </div>
       <div class="hero-photo">
-        <div class="tape"></div>
         <img src="assets/mick.jpg" alt="Portret van Mick van der Velden" />
-        <span class="sticker">Hoi! 👋</span>
       </div>
     </div>
   </div>
 
-  <div class="scroll-cue">scroll</div>
 </section>
-
-<!-- ==========================================================
-     Marquee
-     ========================================================== -->
-<div class="marquee">
-  <div class="marquee-track">
-    <span>Java <span class="star">✦</span> React <span class="star">✦</span> GraphQL <span class="star">✦</span> JSON &amp; XML <span class="star">✦</span> EDIFACT <span class="star">✦</span> Azure <span class="star">✦</span> <span data-i18n="marquee.running">Hardlopen</span> <span class="star">✦</span> <span data-i18n="marquee.curious">Leergierig</span></span>
-  </div>
-</div>
 
 <!-- ==========================================================
      About
@@ -125,24 +107,6 @@
       <em>technische oplossingen met impact</em>.
     </p>
 
-    <div class="stats">
-      <div class="stat">
-        <div class="stat-num"><span data-count="2">0</span><span class="plus">+</span></div>
-        <div class="stat-label" data-i18n="about.stat.years">jaar ervaring</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num"><span data-count="2">0</span></div>
-        <div class="stat-label" data-i18n="about.stat.companies">bedrijven</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num"><span data-count="8">0</span><span class="plus">+</span></div>
-        <div class="stat-label" data-i18n="about.stat.tech">technologieën</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num"><span data-count="5">0</span><span class="plus">x</span></div>
-        <div class="stat-label" data-i18n="about.stat.train">training per week</div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -187,56 +151,6 @@
   <h2 class="section-title" data-i18n-html="xp.title">Waar ik tot nu toe heb <em>gebouwd</em>.</h2>
 
   <div class="timeline" id="timeline"></div>
-</section>
-
-<!-- ==========================================================
-     Playground (interactive demo)
-     ========================================================== -->
-<section class="section wrap reveal" id="playground">
-  <span class="eyebrow" data-i18n="pg.eyebrow">04 — Live demo</span>
-  <h2 class="section-title" data-i18n-html="pg.title">Een kijkje in de <em>code</em>.</h2>
-  <p style="max-width: 60ch; color: var(--ink-soft); margin-bottom: 28px; font-size: 17px;" data-i18n-html="pg.intro">
-    Een kleine integratie-simulator. Links staat code die een inkomende order-payload (JSON of EDIFACT)
-    omzet naar een genormaliseerd intern formaat — precies het soort werk dat ik dagelijks deed bij Copernicus.
-    <strong>Druk op <em>Run</em></strong> om het te proberen, of wissel van input.
-  </p>
-
-  <div class="playground">
-    <div class="pg-pane">
-      <div class="pg-head">
-        <span>OrderMapper.java</span>
-        <div class="tabs">
-          <button class="tab active" data-input="json">JSON</button>
-          <button class="tab" data-input="edifact">EDIFACT</button>
-          <button class="tab" data-input="xml">XML</button>
-        </div>
-      </div>
-      <pre class="pg-code" id="codeBlock"></pre>
-    </div>
-    <div class="pg-pane">
-      <div class="pg-head">
-        <span>stdout</span>
-        <div class="pg-run">
-          <button id="runBtn" class="pg-btn">
-            <svg viewBox="0 0 10 10" fill="currentColor"><path d="M2 1l7 4-7 4z"/></svg>
-            Run
-          </button>
-        </div>
-      </div>
-      <div class="pg-steps" id="pgSteps">
-        <span class="pg-step" data-step="1">① Input</span>
-        <span class="pg-sep">→</span>
-        <span class="pg-step" data-step="2">② Parse</span>
-        <span class="pg-sep">→</span>
-        <span class="pg-step" data-step="3">③ Map</span>
-        <span class="pg-sep">→</span>
-        <span class="pg-step" data-step="4">④ Output</span>
-      </div>
-      <div class="pg-out" id="output">
-        <div class="line res" style="color: var(--ink-muted);">> klaar om te runnen...</div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- ==========================================================
@@ -391,61 +305,8 @@
 <footer class="wrap">
   <div class="foot">
     <span>© 2026 Mick van der Velden. Gebouwd met veel koffie ☕ en een beetje cadence.</span>
-    <span id="timeNow"></span>
   </div>
 </footer>
-
-<!-- ==========================================================
-     Tweaks panel
-     ========================================================== -->
-<div class="tweaks" id="tweaksPanel">
-  <h4>Tweaks</h4>
-  <div class="row">
-    <label>Esthetiek</label>
-    <div class="tweak-seg" id="segAesthetic">
-      <button data-v="default" class="on">Krant</button>
-      <button data-v="terminal">Terminal</button>
-      <button data-v="bold">Poster</button>
-    </div>
-  </div>
-  <div class="row">
-    <label>Thema</label>
-    <div class="tweak-seg" id="segTheme" style="grid-template-columns: 1fr 1fr;">
-      <button data-v="light" class="on">Licht</button>
-      <button data-v="dark">Donker</button>
-    </div>
-  </div>
-  <div class="row">
-    <label>Accentkleur</label>
-    <div class="tweak-acc-row" id="segAccent">
-      <button class="tweak-acc on" data-c="#C65A2E" style="background:#C65A2E"></button>
-      <button class="tweak-acc" data-c="#E24D1A" style="background:#E24D1A"></button>
-      <button class="tweak-acc" data-c="#D9A441" style="background:#D9A441"></button>
-      <button class="tweak-acc" data-c="#6E7F5C" style="background:#6E7F5C"></button>
-      <button class="tweak-acc" data-c="#3A6EA5" style="background:#3A6EA5"></button>
-      <button class="tweak-acc" data-c="#B5426B" style="background:#B5426B"></button>
-    </div>
-  </div>
-  <div class="row">
-    <label>Dichtheid</label>
-    <div class="tweak-seg" id="segDensity" style="grid-template-columns: 1fr 1fr;">
-      <button data-v="spacious" class="on">Ruim</button>
-      <button data-v="compact">Compact</button>
-    </div>
-  </div>
-</div>
-
-<!-- ==========================================================
-     Edit-mode defaults (persisted by host)
-     ========================================================== -->
-<script>
-  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-    "aesthetic": "default",
-    "theme": "light",
-    "accent": "#C65A2E",
-    "density": "spacious"
-  }/*EDITMODE-END*/;
-</script>
 
 <script src="main.js?v=2"></script>
 </body>

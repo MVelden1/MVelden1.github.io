@@ -12,7 +12,6 @@
       'nav.profile': 'Profiel',
       'nav.skills': 'Skills',
       'nav.experience': 'Ervaring',
-      'nav.playground': 'Playground',
       'nav.education': 'Opleiding',
       'nav.beyond': 'Buiten',
       'nav.contact': 'Contact',
@@ -29,10 +28,6 @@
         'met ervaring in het bouwen van <span class="mark">API-integraties</span> tussen B2B-systemen. ' +
         'Heeft gewerkt aan front-end, koppelingen tussen systemen en dataformaten als JSON, XML, EDIFACT en X12. ' +
         '<em>Gedreven, doelgericht en probleemoplossend</em>.',
-      'about.stat.years': 'jaar ervaring',
-      'about.stat.companies': 'bedrijven',
-      'about.stat.tech': 'technologieën',
-      'about.stat.train': 'training per week',
 
       'skills.eyebrow': '02 — Technische vaardigheden',
       'skills.title': 'Waar ik <em>sterk</em> in ben.',
@@ -40,18 +35,6 @@
       'xp.eyebrow': '03 — Werkervaring',
       'xp.title': 'Waar ik tot nu toe heb <em>gebouwd</em>.',
 
-      'pg.eyebrow': '04 — Live demo',
-      'pg.title': 'Een kijkje in de <em>code</em>.',
-      'pg.intro':
-        'Een kleine integratie-simulator. Links staat code die een inkomende order-payload (JSON of EDIFACT) ' +
-        'omzet naar een genormaliseerd intern formaat. Precies het soort werk dat ik dagelijks deed bij Copernicus. ' +
-        '<strong>Druk op <em>Run</em></strong> om het te proberen, of wissel van input.',
-      'pg.ready': '> klaar om te runnen...',
-      'pg.compile': '▸ compiling OrderMapper.java ...',
-      'pg.parse': '▸ parsing <strong>{FORMAT}</strong> payload...',
-      'pg.mapped': '✓ mapped to internal Order model',
-      'pg.result': 'Result:',
-      'pg.done': '✓ klaar · {MS} ms',
 
       'edu.eyebrow': '05 — Opleiding',
       'edu.title': 'Waar ik het <em>geleerd</em> heb.',
@@ -99,16 +82,8 @@
       'form.error': '⚠ Er ging iets mis. Probeer het later opnieuw of mail direct naar mvelden6@gmail.com',
 
       'footer.copy': '© 2026 Mick van der Velden. Gebouwd met veel cola 🥤 en een beetje cadence.',
-      'footer.city': 'Amsterdam',
 
-      'term.whoami': '$ <span class="cmd">whoami</span>',
-      'term.whoami.res': '→ Software Developer · Java &amp; Frontend · integraties',
-      'term.ls':     '$ <span class="cmd">ls skills/</span>',
-      'term.cat':    '$ <span class="cmd">cat status.txt</span>',
-      'term.status': '"Beschikbaar voor nieuwe kansen. Laten we praten."',
 
-      'marquee.running': 'Hardlopen',
-      'marquee.curious': 'Leergierig',
 
       'print.role': 'Software Developer · Java & Frontend',
       'print.profile': 'Profiel',
@@ -131,7 +106,6 @@
       'nav.profile': 'Profile',
       'nav.skills': 'Skills',
       'nav.experience': 'Experience',
-      'nav.playground': 'Playground',
       'nav.education': 'Education',
       'nav.beyond': 'Off-keyboard',
       'nav.contact': 'Contact',
@@ -148,10 +122,6 @@
         'with experience building <span class="mark">API integrations</span> between B2B systems. ' +
         'Has worked on front-end, system connections and data formats like JSON, XML, EDIFACT and X12. ' +
         '<em>Driven, goal-oriented and solution-focused</em>.',
-      'about.stat.years': 'years of experience',
-      'about.stat.companies': 'companies',
-      'about.stat.tech': 'technologies',
-      'about.stat.train': 'workouts per week',
 
       'skills.eyebrow': '02 — Technical skills',
       'skills.title': 'What I <em>reach for</em>.',
@@ -159,18 +129,6 @@
       'xp.eyebrow': '03 — Work experience',
       'xp.title': "Where I've <em>shipped things</em>.",
 
-      'pg.eyebrow': '04 — Live demo',
-      'pg.title': 'A peek at the <em>code</em>.',
-      'pg.intro':
-        'A tiny integration simulator. On the left, code that takes an incoming order payload (JSON or EDIFACT) ' +
-        'and normalises it into an internal model. Exactly the kind of work I did daily at Copernicus. ' +
-        '<strong>Hit <em>Run</em></strong> to try it, or switch inputs.',
-      'pg.ready': '> ready to run...',
-      'pg.compile': '▸ compiling OrderMapper.java ...',
-      'pg.parse': '▸ parsing <strong>{FORMAT}</strong> payload...',
-      'pg.mapped': '✓ mapped to internal Order model',
-      'pg.result': 'Result:',
-      'pg.done': '✓ done · {MS} ms',
 
       'edu.eyebrow': '05 — Education',
       'edu.title': 'How I <em>got here</em>.',
@@ -218,16 +176,8 @@
       'form.error': '⚠ Something went wrong. Please try again later or email mvelden6@gmail.com directly.',
 
       'footer.copy': '© 2026 Mick van der Velden. Built with too much cola 🥤 and a bit of cadence.',
-      'footer.city': 'Amsterdam',
 
-      'term.whoami': '$ <span class="cmd">whoami</span>',
-      'term.whoami.res': '→ Software Developer · Java &amp; Frontend · integrations',
-      'term.ls':     '$ <span class="cmd">ls skills/</span>',
-      'term.cat':    '$ <span class="cmd">cat status.txt</span>',
-      'term.status': '"Open to new opportunities. Let&rsquo;s talk."',
 
-      'marquee.running': 'Running',
-      'marquee.curious': 'Curious',
 
       'print.role': 'Software Developer · Java & Frontend',
       'print.profile': 'Profile',
@@ -292,57 +242,6 @@
           tags: ['Java', 'JSON', 'XML', 'EDIFACT', 'API-integratie'],
         },
       ],
-      code: {
-        json: `<span class="cm">// Normaliseer een inkomende JSON-order.</span>
-<span class="kw">public</span> <span class="tp">Order</span> <span class="fn">fromJson</span>(<span class="tp">String</span> payload) {
-  <span class="tp">JsonNode</span> root = mapper.<span class="fn">readTree</span>(payload);
-
-  <span class="kw">return</span> <span class="tp">Order</span>.<span class="fn">builder</span>()
-    .<span class="fn">id</span>(root.<span class="fn">path</span>(<span class="str">"order_id"</span>).<span class="fn">asText</span>())
-    .<span class="fn">customer</span>(root.<span class="fn">path</span>(<span class="str">"customer"</span>).<span class="fn">asText</span>())
-    .<span class="fn">total</span>(root.<span class="fn">path</span>(<span class="str">"total"</span>).<span class="fn">asDouble</span>())
-    .<span class="fn">currency</span>(<span class="str">"EUR"</span>)
-    .<span class="fn">build</span>();
-}
-
-<span class="cm">// Input:</span>
-<span class="cm">// { "order_id": "A-1042", "customer": "Acme BV",</span>
-<span class="cm">//   "total": 249.50, "items": 3 }</span>`,
-        edifact: `<span class="cm">// Parse een EDIFACT ORDERS-bericht.</span>
-<span class="kw">public</span> <span class="tp">Order</span> <span class="fn">fromEdifact</span>(<span class="tp">String</span> msg) {
-  <span class="tp">Edifact</span> e = <span class="tp">Edifact</span>.<span class="fn">parse</span>(msg);
-
-  <span class="kw">return</span> <span class="tp">Order</span>.<span class="fn">builder</span>()
-    .<span class="fn">id</span>(e.<span class="fn">segment</span>(<span class="str">"BGM"</span>).<span class="fn">element</span>(<span class="num">1</span>))
-    .<span class="fn">customer</span>(e.<span class="fn">nad</span>(<span class="str">"BY"</span>).<span class="fn">name</span>())
-    .<span class="fn">total</span>(e.<span class="fn">moa</span>(<span class="num">86</span>).<span class="fn">amount</span>())
-    .<span class="fn">currency</span>(e.<span class="fn">cux</span>().<span class="fn">iso</span>())
-    .<span class="fn">build</span>();
-}
-
-<span class="cm">// Input:</span>
-<span class="cm">// UNH+1+ORDERS:D:96A:UN'</span>
-<span class="cm">// BGM+220+A-1042+9'</span>
-<span class="cm">// NAD+BY+::9+Acme BV'</span>
-<span class="cm">// MOA+86:249.50'</span>`,
-        xml: `<span class="cm">// Parse een XML-order met een XPath-mapper.</span>
-<span class="kw">public</span> <span class="tp">Order</span> <span class="fn">fromXml</span>(<span class="tp">String</span> xml) {
-  <span class="tp">Document</span> doc = <span class="tp">XmlParser</span>.<span class="fn">parse</span>(xml);
-
-  <span class="kw">return</span> <span class="tp">Order</span>.<span class="fn">builder</span>()
-    .<span class="fn">id</span>(<span class="fn">xpath</span>(doc, <span class="str">"/order/@id"</span>))
-    .<span class="fn">customer</span>(<span class="fn">xpath</span>(doc, <span class="str">"/order/customer/name"</span>))
-    .<span class="fn">total</span>(<span class="tp">Double</span>.<span class="fn">parseDouble</span>(<span class="fn">xpath</span>(doc, <span class="str">"/order/total"</span>)))
-    .<span class="fn">currency</span>(<span class="fn">xpath</span>(doc, <span class="str">"/order/total/@ccy"</span>))
-    .<span class="fn">build</span>();
-}
-
-<span class="cm">// Input:</span>
-<span class="cm">// &lt;order id="A-1042"&gt;</span>
-<span class="cm">//   &lt;customer&gt;&lt;name&gt;Acme BV&lt;/name&gt;&lt;/customer&gt;</span>
-<span class="cm">//   &lt;total ccy="EUR"&gt;249.50&lt;/total&gt;</span>
-<span class="cm">// &lt;/order&gt;</span>`,
-      },
     },
     en: {
       skills: [
@@ -381,57 +280,6 @@
           tags: ['Java', 'JSON', 'XML', 'EDIFACT', 'API integration'],
         },
       ],
-      code: {
-        json: `<span class="cm">// Normalise an incoming JSON order.</span>
-<span class="kw">public</span> <span class="tp">Order</span> <span class="fn">fromJson</span>(<span class="tp">String</span> payload) {
-  <span class="tp">JsonNode</span> root = mapper.<span class="fn">readTree</span>(payload);
-
-  <span class="kw">return</span> <span class="tp">Order</span>.<span class="fn">builder</span>()
-    .<span class="fn">id</span>(root.<span class="fn">path</span>(<span class="str">"order_id"</span>).<span class="fn">asText</span>())
-    .<span class="fn">customer</span>(root.<span class="fn">path</span>(<span class="str">"customer"</span>).<span class="fn">asText</span>())
-    .<span class="fn">total</span>(root.<span class="fn">path</span>(<span class="str">"total"</span>).<span class="fn">asDouble</span>())
-    .<span class="fn">currency</span>(<span class="str">"EUR"</span>)
-    .<span class="fn">build</span>();
-}
-
-<span class="cm">// Input:</span>
-<span class="cm">// { "order_id": "A-1042", "customer": "Acme BV",</span>
-<span class="cm">//   "total": 249.50, "items": 3 }</span>`,
-        edifact: `<span class="cm">// Parse an EDIFACT ORDERS message.</span>
-<span class="kw">public</span> <span class="tp">Order</span> <span class="fn">fromEdifact</span>(<span class="tp">String</span> msg) {
-  <span class="tp">Edifact</span> e = <span class="tp">Edifact</span>.<span class="fn">parse</span>(msg);
-
-  <span class="kw">return</span> <span class="tp">Order</span>.<span class="fn">builder</span>()
-    .<span class="fn">id</span>(e.<span class="fn">segment</span>(<span class="str">"BGM"</span>).<span class="fn">element</span>(<span class="num">1</span>))
-    .<span class="fn">customer</span>(e.<span class="fn">nad</span>(<span class="str">"BY"</span>).<span class="fn">name</span>())
-    .<span class="fn">total</span>(e.<span class="fn">moa</span>(<span class="num">86</span>).<span class="fn">amount</span>())
-    .<span class="fn">currency</span>(e.<span class="fn">cux</span>().<span class="fn">iso</span>())
-    .<span class="fn">build</span>();
-}
-
-<span class="cm">// Input:</span>
-<span class="cm">// UNH+1+ORDERS:D:96A:UN'</span>
-<span class="cm">// BGM+220+A-1042+9'</span>
-<span class="cm">// NAD+BY+::9+Acme BV'</span>
-<span class="cm">// MOA+86:249.50'</span>`,
-        xml: `<span class="cm">// Parse an XML order with an XPath mapper.</span>
-<span class="kw">public</span> <span class="tp">Order</span> <span class="fn">fromXml</span>(<span class="tp">String</span> xml) {
-  <span class="tp">Document</span> doc = <span class="tp">XmlParser</span>.<span class="fn">parse</span>(xml);
-
-  <span class="kw">return</span> <span class="tp">Order</span>.<span class="fn">builder</span>()
-    .<span class="fn">id</span>(<span class="fn">xpath</span>(doc, <span class="str">"/order/@id"</span>))
-    .<span class="fn">customer</span>(<span class="fn">xpath</span>(doc, <span class="str">"/order/customer/name"</span>))
-    .<span class="fn">total</span>(<span class="tp">Double</span>.<span class="fn">parseDouble</span>(<span class="fn">xpath</span>(doc, <span class="str">"/order/total"</span>)))
-    .<span class="fn">currency</span>(<span class="fn">xpath</span>(doc, <span class="str">"/order/total/@ccy"</span>))
-    .<span class="fn">build</span>();
-}
-
-<span class="cm">// Input:</span>
-<span class="cm">// &lt;order id="A-1042"&gt;</span>
-<span class="cm">//   &lt;customer&gt;&lt;name&gt;Acme BV&lt;/name&gt;&lt;/customer&gt;</span>
-<span class="cm">//   &lt;total ccy="EUR"&gt;249.50&lt;/total&gt;</span>
-<span class="cm">// &lt;/order&gt;</span>`,
-      },
     },
   };
 
@@ -446,17 +294,13 @@
   let userHasChosenTheme = hasStoredTheme;
   const prefersDarkScheme = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 
-  const state = Object.assign({}, TWEAK_DEFAULTS, persistedState);
+  const state = { theme: hasStoredTheme ? persistedState.theme : 'light' };
   if (!hasStoredTheme && prefersDarkScheme) {
     state.theme = prefersDarkScheme.matches ? 'dark' : 'light';
   }
 
   function applyState() {
     root.setAttribute('data-theme', state.theme);
-    root.setAttribute('data-aesthetic', state.aesthetic);
-    root.style.setProperty('--accent', state.accent);
-    root.style.setProperty('--gutter', state.density === 'compact' ? 'clamp(14px,3vw,36px)' : 'clamp(20px,4vw,56px)');
-    document.body.style.fontSize = state.density === 'compact' ? '15px' : '17px';
 
     const icon = document.getElementById('themeIcon');
     if (icon) {
@@ -466,18 +310,10 @@
         icon.innerHTML = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>';
       }
     }
-    syncSegs();
   }
 
   function saveState() {
     try { localStorage.setItem('cv_state', JSON.stringify(state)); } catch {}
-  }
-
-  function syncSegs() {
-    document.querySelectorAll('#segAesthetic button').forEach(b => b.classList.toggle('on', b.dataset.v === state.aesthetic));
-    document.querySelectorAll('#segTheme button').forEach(b => b.classList.toggle('on', b.dataset.v === state.theme));
-    document.querySelectorAll('#segDensity button').forEach(b => b.classList.toggle('on', b.dataset.v === state.density));
-    document.querySelectorAll('#segAccent button').forEach(b => b.classList.toggle('on', b.dataset.c === state.accent));
   }
 
   applyState();
@@ -519,12 +355,8 @@
     if (label) label.textContent = lang === 'nl' ? 'EN' : 'NL';
     const footCopy = document.querySelector('.foot > span:first-child');
     if (footCopy) footCopy.textContent = t('footer.copy');
-    updateTime();
-    renderTerminal();
     renderSkills();
     renderExperience();
-    renderCode();
-    resetPlaygroundOutput();
   }
 
   const langBtn = document.getElementById('langBtn');
@@ -534,54 +366,6 @@
       try { localStorage.setItem('cv_lang', lang); } catch {}
       applyLang();
     });
-  }
-
-  // ========================================================
-  // TYPEWRITER HERO NAME
-  // ========================================================
-  const heroEl = document.getElementById('heroText');
-  const fullName = 'Mick van der Velden';
-  let i = 0;
-  (function typeNext() {
-    if (i <= fullName.length) {
-      heroEl.textContent = fullName.slice(0, i);
-      i++;
-      setTimeout(typeNext, 65 + Math.random() * 40);
-    }
-  })();
-
-  // ========================================================
-  // TERMINAL INTRO
-  // ========================================================
-  const term = document.getElementById('terminal');
-  let termTimer = null;
-  function renderTerminal() {
-    if (!term) return;
-    if (termTimer) { clearTimeout(termTimer); termTimer = null; }
-    term.innerHTML = '';
-    const pre = '<span class="prompt">mick@dev</span> <span class="res">~</span> ';
-    const lines = [
-      pre + t('term.whoami'),
-      '<span class="res">' + t('term.whoami.res') + '</span>',
-      pre + t('term.ls'),
-      '<span class="res"><span class="kw">Java</span>  <span class="kw">React</span>  <span class="kw">GraphQL</span>  <span class="kw">JSON/XML</span>  <span class="kw">EDIFACT</span></span>',
-      pre + t('term.cat'),
-      '<span class="str">' + t('term.status') + '</span>',
-      pre + '<span class="cmd">_</span>',
-    ];
-    let ti = 0;
-    function nextLine() {
-      if (ti >= lines.length) { termTimer = null; return; }
-      const d = document.createElement('div');
-      d.innerHTML = lines[ti];
-      d.style.opacity = '0';
-      d.style.transition = 'opacity .3s';
-      term.appendChild(d);
-      requestAnimationFrame(() => { d.style.opacity = '1'; });
-      ti++;
-      termTimer = setTimeout(nextLine, 700 + Math.random() * 200);
-    }
-    termTimer = setTimeout(nextLine, 400);
   }
 
   // ========================================================
@@ -596,30 +380,6 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // ========================================================
-  // STAT COUNTERS
-  // ========================================================
-  const statIO = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        const el = e.target;
-        const target = parseInt(el.dataset.count, 10);
-        const dur = 1200;
-        const start = performance.now();
-        (function tick(now) {
-          now = now || performance.now();
-          const tm = Math.min(1, (now - start) / dur);
-          const eased = 1 - Math.pow(1 - tm, 3);
-          const val = Math.round(target * eased);
-          el.textContent = val >= 1000 ? val.toLocaleString(lang === 'nl' ? 'nl-NL' : 'en-GB') : val;
-          if (tm < 1) requestAnimationFrame(tick);
-        })();
-        statIO.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('[data-count]').forEach(el => statIO.observe(el));
 
   // ========================================================
   // SKILLS
@@ -675,89 +435,6 @@
   }
 
   // ========================================================
-  // PLAYGROUND — code + run
-  // ========================================================
-  const codeBlock = document.getElementById('codeBlock');
-  const output = document.getElementById('output');
-  let currentInput = 'json';
-
-  function renderCode() {
-    if (!codeBlock) return;
-    codeBlock.innerHTML = DATA[lang].code[currentInput];
-  }
-
-  const pgSteps = document.getElementById('pgSteps');
-  function resetSteps() {
-    if (!pgSteps) return;
-    pgSteps.querySelectorAll('.pg-step').forEach(s => s.classList.remove('active'));
-  }
-  function activateStep(n) {
-    if (!pgSteps) return;
-    pgSteps.querySelectorAll('.pg-step').forEach(s => s.classList.remove('active'));
-    const el = pgSteps.querySelector(`[data-step="${n}"]`);
-    if (el) el.classList.add('active');
-  }
-
-  function resetPlaygroundOutput() {
-    if (!output) return;
-    output.innerHTML = `<div class="line res" style="color: var(--ink-muted);">${t('pg.ready')}</div>`;
-    resetSteps();
-  }
-
-  document.querySelectorAll('.pg-head .tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.pg-head .tab').forEach(tb => tb.classList.remove('active'));
-      tab.classList.add('active');
-      currentInput = tab.dataset.input;
-      renderCode();
-    });
-  });
-
-  const MOCK_RESULT = {
-    id: 'A-1042',
-    customer: 'Acme BV',
-    total: 249.50,
-    currency: 'EUR',
-    items: 3,
-  };
-
-  const runBtn = document.getElementById('runBtn');
-  if (runBtn) {
-    runBtn.addEventListener('click', () => {
-      output.innerHTML = '';
-      resetSteps();
-      const ms = (Math.random() * 18 + 12).toFixed(1);
-      const steps = [
-        { html: '<span style="color: var(--ink-muted);">' + t('pg.compile') + '</span>', pgStep: 1 },
-        { html: '<span style="color: var(--ink-muted);">' + t('pg.parse').replace('{FORMAT}', currentInput.toUpperCase()) + '</span>', pgStep: 2 },
-        { html: '<span style="color: var(--accent-2);">' + t('pg.mapped') + '</span>', pgStep: 3 },
-        { html: '<br/><span style="color: var(--ink-muted);">' + t('pg.result') + '</span>', pgStep: 4 },
-        { json: true },
-        { html: '<br/><span style="color: var(--accent);">' + t('pg.done').replace('{MS}', ms) + '</span>' },
-      ];
-      let di = 0;
-      (function tick() {
-        if (di >= steps.length) return;
-        const s = steps[di];
-        if (s.pgStep) activateStep(s.pgStep);
-        const line = document.createElement('div');
-        line.className = 'line';
-        if (s.json) {
-          line.innerHTML = '<pre>' + JSON.stringify(MOCK_RESULT, null, 2)
-            .replace(/"([^"]+)":/g, '<span class="k">"$1"</span>:')
-            .replace(/: "([^"]+)"/g, ': <span class="s">"$1"</span>')
-            .replace(/: (\d+\.?\d*)/g, ': <span class="v">$1</span>') + '</pre>';
-        } else {
-          line.innerHTML = s.html;
-        }
-        output.appendChild(line);
-        di++;
-        setTimeout(tick, 300);
-      })();
-    });
-  }
-
-  // ========================================================
   // CONTACT — copy email + form
   // ========================================================
   const emailLink = document.getElementById('emailCopy');
@@ -802,27 +479,6 @@
       hideBanners();
 
       const data = new FormData(contactForm);
-      const accessKey = (data.get('access_key') || '').toString();
-      const hasRealKey = accessKey && !/YOUR-WEB3FORMS-ACCESS-KEY/i.test(accessKey);
-
-      const name = (data.get('name') || '').toString().trim();
-      const email = (data.get('email') || '').toString().trim();
-      const message = (data.get('message') || '').toString().trim();
-
-      if (!hasRealKey) {
-        const subjectText = lang === 'en'
-          ? `Message via cv site — ${name || 'unknown'}`
-          : `Bericht via cv-site — ${name || 'onbekend'}`;
-        const subject = encodeURIComponent(subjectText);
-        const body = encodeURIComponent(
-          `${message}\n\n— ${name}${email ? ' <' + email + '>' : ''}`
-        );
-        window.location.href = `mailto:mvelden6@gmail.com?subject=${subject}&body=${body}`;
-        showBanner(successEl);
-        contactForm.reset();
-        return;
-      }
-
       if (submitBtn) submitBtn.disabled = true;
       if (submitLabel) submitLabel.textContent = t('form.sending');
 
@@ -979,55 +635,6 @@
     });
   }, { rootMargin: '-40% 0px -55% 0px' });
   sections.forEach(s => navIO.observe(s));
-
-  // ========================================================
-  // FOOTER TIME
-  // ========================================================
-  function updateTime() {
-    const locale = lang === 'nl' ? 'nl-NL' : 'en-GB';
-    const time = new Date().toLocaleTimeString(locale, { timeZone: 'Europe/Amsterdam', hour: '2-digit', minute: '2-digit' });
-    const el = document.getElementById('timeNow');
-    if (el) el.textContent = `${t('footer.city')} · ${time}`;
-  }
-  setInterval(updateTime, 30000);
-
-  // ========================================================
-  // TWEAKS PANEL + host protocol
-  // ========================================================
-  function bindSeg(id, key) {
-    document.querySelectorAll(`#${id} button`).forEach(b => {
-      b.addEventListener('click', () => {
-        if (key === 'theme') userHasChosenTheme = true;
-        state[key] = b.dataset.v;
-        applyState(); saveState();
-        try {
-          window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [key]: b.dataset.v } }, '*');
-        } catch {}
-      });
-    });
-  }
-  bindSeg('segAesthetic', 'aesthetic');
-  bindSeg('segTheme', 'theme');
-  bindSeg('segDensity', 'density');
-
-  document.querySelectorAll('#segAccent button').forEach(b => {
-    b.addEventListener('click', () => {
-      state.accent = b.dataset.c;
-      applyState(); saveState();
-      try {
-        window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { accent: b.dataset.c } }, '*');
-      } catch {}
-    });
-  });
-
-  window.addEventListener('message', (e) => {
-    if (!e.data) return;
-    if (e.data.type === '__activate_edit_mode') document.getElementById('tweaksPanel').classList.add('open');
-    if (e.data.type === '__deactivate_edit_mode') document.getElementById('tweaksPanel').classList.remove('open');
-  });
-  try {
-    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
-  } catch {}
 
   // ========================================================
   // INITIAL LANGUAGE APPLICATION
