@@ -56,7 +56,7 @@ const EN = {
 
   'edu.now.year': '2021 - present',
   'edu.status.live': 'In progress',
-  'edu.note': 'Final assignment Programming Fundamentals: SportStats CLI, a command-line tool in Python using the Strava API',
+  'edu.note': 'Final assignment Programming Fundamentals: <a href="https://github.com/MVelden1/SportStats-CLI" target="_blank" rel="noopener">SportStats CLI</a>, a command-line tool in Python using the Strava API',
   'edu.pe.title': 'Physical Education',
   'edu.status.prop': '(propaedeutic diploma)',
   'edu.ta.title': 'Teaching Assistant',
